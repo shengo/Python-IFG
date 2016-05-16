@@ -1,0 +1,11 @@
+
+                                                                                                                Protéger les piétons qui textent sur leur téléphone mobile. Pour protéger les jeunes qui marchent en textant, la ville d’Augsbourg en Allemagne est en train d’encastrer des signaux lumineux dans la chaussée. Ils sont visibles même quand on regarde son écran la tête tournée vers le sol.
+
+   #Germany #Augsbourg City installs floor traffic lights for smartphone addicts https://t.co/PesGGs9Bp6 https://t.co/iaUpAQQWZI— Nepareizais (@Nepareizais)
+   
+
+require(["twitter/widgets"]);
+
+Les cyclistes doivent être protégés, notamment aux intersections. Pour y parvenir la ville d’Eindhoven aux Pays-Bas teste un système qui détecte voitures et bicyclettes à l’approche d’un carrefour. Si l’algorithme détecte un risque de collision, il flashe. Cela serait surtout utile dans des pays où les conducteurs sont moins prudents mais où les municipalités n’ont pas nécessairement les moyens de multiplier de telles installations (un peu moins de 40 000 €).Ralentir le trafic routier avec des illusions d’optique : tel est l’objectif que se sont fixé deux artistes indiennes. Les obstacles en trompe l’œil poussent à réduire la vitesse comme le montre cette vidéo. L’idée a également été testée en Chine. Elle coûte moins cher à mettre en place que de véritables plots « en dur » … mais il est difficile de dire combien de fois chaque conducteur se laisse avoir.
+
+                        

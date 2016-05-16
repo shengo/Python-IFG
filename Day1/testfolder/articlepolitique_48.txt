@@ -1,0 +1,20 @@
+
+                                                                                                                
+   
+
+
+Les informations parues dans la presse ces derniers jours – et démenties par l’intéressé – indiquant que le ministre de l’économie, Emmanuel Macron, a levé des fonds pour préparer une campagne présidentielle demandent un éclaircissement, estime le député Les Républicains Georges Fenech. Il a donc écrit, jeudi 12 mai, à la Haute Autorité pour la transparence de la vie publique (HATVP) pour « établir la vérité », un courrier reproduit sur son compte Twitter.
+
+   Voici le courrier envoyé à la Haute Autorité pour la transparence de la vie publique concernant @EmmanuelMacron https://t.co/60YCyExIBY— GeorgesFENECH (@Georges FENECH)
+   
+
+require(["twitter/widgets"]);
+
+« Dans quel cadre un ministre de la République peut-il lever des fonds, démarcher personnellement des donateurs à l’étranger et pour quelles finalités ? Avez-vous été officiellement averti par le ministre de cette activité financière, dans le cadre de sa déclaration de patrimoine et d’intérêt ? »
+Selon le député LR, « cette confusion des genres, voire ce potentiel conflit d’intérêts, ne peut qu’interpeller la représentation nationale et appelle, en tout état de cause, une clarification de la part de votre Haute Autorité », poursuit-il.
+« Aucune levée de fonds particulière »
+Début mai, Paris-Match avait écrit que, lors d’un déplacement à Londres, le ministre de l’économie, qui a fondé le mouvement En marche !, « aurait levé près de 10 millions de livres sterling (environ 12,75 millions d’euros) » pour « mener campagne s’il décidait de se lancer ».
+Le service de presse du mouvement avait alors démenti qu’il y ait eu une levée de fonds en tant que tel, précisant qu’il y avait peut-être eu des dons de la part des personnes rencontrées, mais pas de ce montant.
+Jeudi, Emmanuel Macron a à nouveau démenti avoir levé des fonds pour financer une éventuelle campagne présidentielle, et réaffirmé qu’il ne se déclarerait pas candidat en juin, contrairement à ce qu’assurent certains médias.
+Le ministre de l’économie « est allé en visite à la rencontre des autorités britanniques et des entreprises et des entrepreneurs britanniques et français, qui sont nombreux en Grande-Bretagne et à Londres. Il n’y a eu aucune levée de fonds particulière pour je ne sais quelle association », avait affirmé mardi le premier ministre Manuel Valls, lors de la séance des questions au gouvernement à l’Assemblée.
+                        

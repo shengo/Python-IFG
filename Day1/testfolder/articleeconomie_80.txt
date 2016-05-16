@@ -1,0 +1,1423 @@
+
+                                                                                                                
+   
+
+
+Des étudiants, salariés, retraités ou chômeurs manifestent, plusieurs fois par mois, contre le projet de réforme du code du travail, adopté jeudi 12 mai à l’Assemblée nationale après le rejet de la motion de censure du gouvernement. Depuis la première journée de manifestation, le 9 mars, ils ont été nombreux à montrer leur opposition à la loi travail partout dans le pays. Combien, exactement ?
+
+
+	#container_14631459380{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14631459380{
+		height:500px;
+	}
+	#container_14631459380 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14631459380 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14631459380 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14631459380 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	En France, l’évolution du nombre de manifestants depuis le début de la mobilisation contre la réforme du code du travail
+	Chiffres de participation par le ministère de l’intérieur et les syndicats.
+	
+	
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14631459380",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#ff3232","#0386c3","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: 1250000,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:"",
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["9 mars","17 mars","24 mars","31 mars","9 avril","28 avril","1er mai","12 mai"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Selon les organisateurs ",
+    "color": "#ff3232",
+    "data": [
+      [
+        "",
+        450000
+      ],
+      [
+        "",
+        150000
+      ],
+      [
+        "",
+        150000
+      ],
+      [
+        "",
+        1200000
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        500000
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Selon la police ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        224000
+      ],
+      [
+        "",
+        69000
+      ],
+      [
+        "",
+        43000
+      ],
+      [
+        "",
+        390000
+      ],
+      [
+        "",
+        120000
+      ],
+      [
+        "",
+        170000
+      ],
+      [
+        "",
+        84000
+      ],
+      [
+        "",
+        43000
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: -2,
+		valuePrefix: 0,
+		valueSuffix: 0,
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Difficile à dire. D’abord, comme on peut le voir sur le graphique ci-dessus, parce que le ministère de l’intérieur et les syndicats s’écharpent au sujet des chiffres à chaque nouvelle manifestation. Les écarts sont souvent considérables, notamment en raison de techniques de comptage différentes. Néanmoins, on peut aisément observer des tendances communes pour les journées des 9 mars, 31 mars et 28 avril, lors desquelles les Français furent particulièrement nombreux à descendre dans la rue.
+Ensuite parce que les syndicats ne déclarent pas toujours de chiffres. En analysant les principales journées de mobilisation appelées par les syndicats – Confédération générale du travail (CGT), Force ouvrière (FO), Fédération syndicale unitaire (FSU), union syndicale Solidaires, Union nationale des étudiants de France (UNEF), l’Union nationale lycéenne (UNL) et Fédération indépendante et démocratique lycéenne (FIDL) –, nous nous sommes rendu compte qu’ils n’ont pas dénombré les participants, au niveau national, lors des journées des 9 avril, 1er mai et 12 mai.
+
+        Lire aussi :
+         
+    
+                Comment mieux compter le nombre de participants aux manifestations
+    
+
+
+En revanche, la CGT a comptabilisé le nombre de personnes présentes à Paris lors de ces mêmes manifestations, ce qui peut donner un ordre d’idée des mouvements nationaux.
+
+
+	#container_14631473724{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14631473724{
+		height:500px;
+	}
+	#container_14631473724 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14631473724 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14631473724 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14631473724 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	A Paris, la mobilisation contre la réforme du code du travail en légère baisse
+	Chiffres de participation par le ministère de l’intérieur et les syndicats.
+	
+	
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14631473724",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#ff3232","#0386c3","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: 120000,
+		startOnTick: true,
+		endOnTick:1,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["9 mars","17 mars","24 mars","31 mars","9 avril","28 avril","1er mai","3 mai","12 mai"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Selon les organisateurs ",
+    "color": "#ff3232",
+    "data": [
+      [
+        "",
+        100000
+      ],
+      [
+        "",
+        80000
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        110000
+      ],
+      [
+        "",
+        60000
+      ],
+      [
+        "",
+        70000
+      ],
+      [
+        "",
+        3000
+      ],
+      [
+        "",
+        50000
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Selon la police ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        29000
+      ],
+      [
+        "",
+        9000
+      ],
+      [
+        "",
+        5200
+      ],
+      [
+        "",
+        27000
+      ],
+      [
+        "",
+        20000
+      ],
+      [
+        "",
+        15000
+      ],
+      [
+        "",
+        17000
+      ],
+      [
+        "",
+        1500
+      ],
+      [
+        "",
+        12000
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 0,
+		valuePrefix: "",
+		valueSuffix: "",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Deux mois après le début des manifestations, on peut donc constater une légère baisse de la mobilisation dans la capitale. Dans les quatre plus grandes villes de province, la tendance est la même.
+
+
+	#container_14631500923{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14631500923{
+		height:500px;
+	}
+	#container_14631500923 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14631500923 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14631500923 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14631500923 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Dans les plus grandes villes du pays, la journée du 31 mars a été celle de la plus forte mobilisation.
+	Chiffres de participation par le ministère de l'intérieur.
+	
+	
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14631500923",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#5bc1f4","#ff3232","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:"normal",
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:0
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: 75000,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["9 mars","31 mars","9 avril","28 avril","1er mai"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Paris ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        29000
+      ],
+      [
+        "",
+        27000
+      ],
+      [
+        "",
+        20000
+      ],
+      [
+        "",
+        15000
+      ],
+      [
+        "",
+        17000
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Marseille ",
+    "color": "#FFc832",
+    "data": [
+      [
+        "",
+        5600
+      ],
+      [
+        "",
+        11200
+      ],
+      [
+        "",
+        3800
+      ],
+      [
+        "",
+        4800
+      ],
+      [
+        "",
+        2100
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Lyon ",
+    "color": "#5bc1f4",
+    "data": [
+      [
+        "",
+        7000
+      ],
+      [
+        "",
+        12000
+      ],
+      [
+        "",
+        4000
+      ],
+      [
+        "",
+        5500
+      ],
+      [
+        "",
+        2000
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Toulouse ",
+    "color": "#ff3232",
+    "data": [
+      [
+        "",
+        10000
+      ],
+      [
+        "",
+        20000
+      ],
+      [
+        "",
+        8000
+      ],
+      [
+        "",
+        3800
+      ],
+      [
+        "",
+        1800
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 0,
+		valuePrefix: "",
+		valueSuffix: "",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Notons toutefois que les chiffres du graphique ci-dessus sont ceux du ministère de l’intérieur, qui fournit des données à chaque manifestation. Lors de certaines d’entre elles, en province, les syndicats fournissent par ailleurs des chiffres très différents : le 28 avril, la CGT a comptabilisé 75 000 personnes à Marseille, tandis que FO en calculait 30 000 et la police 4 800.
+Si l’on observe le nombre de défilés dans l’ensemble du pays, sans se préoccuper de la quantité de personnes présentes, on observe une relative stabilité des chiffres.
+
+
+	#container_14631523048{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14631523048{
+		height:500px;
+	}
+	#container_14631523048 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14631523048 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14631523048 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14631523048 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Depuis le 9 mars, le nombre de défilés en province ne faiblit pas
+	Selon les chiffres du ministère de l’intérieur et des syndicats. 
+	
+	
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14631523048",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["9 mars","31 mars","9 avril","28 avril"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Nombre de défilés ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        175
+      ],
+      [
+        "",
+        233
+      ],
+      [
+        "",
+        200
+      ],
+      [
+        "",
+        160
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 0,
+		valuePrefix: "",
+		valueSuffix: "",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+                        
