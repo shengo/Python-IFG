@@ -14,32 +14,43 @@ if not path.exists (out):
 	makedirs(out)
 
 listeCategory = ["politique", "economie", "sport", "culture", "sciences"]
+#listeCategory = ["politique",  "sport", "culture", "sciences"]
 
 for category in listeCategory:
+	#out="./testfolder/"	
 	outCategory = out + "/" + category
 	if not path.exists (outCategory):	
 		makedirs(outCategory)
 
-	for i in range (1,4):
+	for i in range (1,3):
 		urlCategory = r'http://www.lemonde.fr/{}/{}.html'.format(category, i)
 		file = urllib2.urlopen(urlCategory)
 		soup = BeautifulSoup(file, "html5lib")
 		blocURLS = soup.find_all(href=re.compile(r'\/\S+\/article\/\S+\.html'))
 		#print urlCategory
 	
-		for t_url in blocURLS:
-			URL = t_url["href"]
-			URL = "http://lemonde.fr/" + URL
+		for turl in blocURLS:
+						
+			URL = turl["href"]
+			#print "---------",  URL
+			URL = "http://lemonde.fr" + URL
 			counter = counter + 1
-			print URL
+			#print URL
 			nomFichiers = "article" + category + "_" + str(counter) + ".txt"
 		   
 			file=urllib2.urlopen(URL)
 			soup = BeautifulSoup( file , "html5lib" )
-			article = soup.find( id=re.compile("articleBody") )
+			#article = soup.find( id | class =re.compile(r'articleBody | content-article-body') )
+			
+			#article = soup.find( id=re.compile("articleBody") )
+			#if(article==""):
+			#	article = soup.find ( 'class':re.compile("content-article-body")
+			article=soup.find('div',{'class':re.compile(r'.*article.*')})
+			
+			#print article			
 			article = article.get_text()
 			   
-			with codecs.open(os.path.join(out , nomFichiers) , "w" , encoding="utf-8") as fout:
+			with codecs.open(os.path.join(out , category, nomFichiers) , "w" , encoding="utf-8") as fout:
 				fout.write(article)
 			fout.close()
 
