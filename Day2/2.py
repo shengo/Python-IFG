@@ -15,37 +15,49 @@ counter =0
 
 def nettoyerHTML(texte):	
     
-	pattern=re.compile(r'(<style.*?>([\s\S]*?)<\/style>)/gi',re.UNICODE)
-	match=re.search(pattern, texte)	
+	#pattern=re.compile(r'(<style.*?>([\s\S]*?)<\/style>)',re.UNICODE)
+	#match=re.search(pattern, texte)	
+	#if match:	
+	#	texte=re.sub(pattern,'',texte)
+	
+	pattern=re.compile(r'<script[\s\S]+<\/script>',re.UNICODE)
+	match=re.search(pattern, texte)
 	if match:	
 		texte=re.sub(pattern,'',texte)
-	
-	pattern=re.compile(r'<script[\s\S]+<\/script>/gi',re.UNICODE)
-	match=re.search(pattern, texte)
-	if match:	
-		texte=re.sub(pattern,'',texte)	
-	
-	pattern=re.compile(r'<img.*?><\/img>/gi',re.UNICODE)
-	match=re.search(pattern, texte)
-	if match:	
-		texte=re.sub(pattern,'/n IMAGE WAS HERE /n',texte)
-		print "found image"	
 
-	pattern=re.compile(r'#container.\d+{.+}\);',re.UNICODE)
-	match=re.search(pattern, texte)	
-	if match:	
-		texte=re.sub(pattern,'',texte)
-		print "\n 132123 \n"
+	pattern=re.compile(r'<p class="lire.*">\s+Lire.*[\s\S]+<\/p>/gi',re.UNICODE) # for read more links
+    	match=re.search(pattern, texte)
+    	if match:
+       		texte=re.sub(pattern,'',texte)
+	# zeda sams /gi gasascorebelia marto pirvels poulobs ise	
+
+	#pattern=re.compile(r'#container.\d+{.+}\);',re.UNICODE)
+	#match=re.search(pattern, texte)	
+	#if match:	
+	#	texte=re.sub(pattern,'',texte)
+	#	print "\n 132123 \n"
 	
 	return texte	
+
+def nettoyerEspaces(texte):		
+	pattern1=re.compile(r'[ \t\n\r\f\v]+',re.UNICODE)	#all empy lines.spaces...
+	match1=re.search(pattern1, texte)	
+	if match1:	
+		texte=re.sub(pattern1,' ',texte)	
+   
+	pattern2=re.compile(r'^( )+')	
+	match2=re.search(pattern2, texte)	#blank spaces in the beggining of article
+	if match2:	
+		texte=re.sub(pattern2,' ',texte)	
+	return texte
 #----------------------------------------------------------------------------------
 
 
 if not path.exists (out):
 	makedirs(out)
 
-listeCategory = ["politique", "economie", "sport", "culture", "sciences"]
-#listeCategory = ["politique"]
+#listeCategory = ["politique", "economie", "sport", "culture", "sciences"]
+listeCategory = ["politique"]
 
 for category in listeCategory:
 	#out="./testfolder/"	
@@ -82,18 +94,18 @@ for category in listeCategory:
 			
 			if article1 :
 				article=unicode(article1)
-				
+				article=nettoyerHTML(article)				
 				article=BeautifulSoup(article, "html5lib")	
 				article = article.get_text()
-				article=nettoyerHTML(article)
-				article=unicode(article)
+				article=nettoyerEspaces(article)
+				#article=unicode(article)
 			elif article2 :
 				article=unicode(article2)
-				
+				article=nettoyerHTML(article)				
 				article=BeautifulSoup(article, "html5lib")	
 				article = article.get_text()
-				article=nettoyerHTML(article)
-				article=unicode(article)
+				article=nettoyerEspaces(article)
+				#article=unicode(article)
 			else :
 				pass
 
