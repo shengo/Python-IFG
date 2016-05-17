@@ -15,15 +15,27 @@ counter =0
 
 def nettoyerHTML(texte):	
     
-	pattern=re.compile(r'(<style.*?>([\s\S]*?)<\/style>)',re.UNICODE)
+	pattern=re.compile(r'(<style.*?>([\s\S]*?)<\/style>)/gi',re.UNICODE)
 	match=re.search(pattern, texte)	
 	if match:	
 		texte=re.sub(pattern,'',texte)
 	
-	pattern=re.compile(r'<script[\s\S]+<\/script>',re.UNICODE)
+	pattern=re.compile(r'<script[\s\S]+<\/script>/gi',re.UNICODE)
 	match=re.search(pattern, texte)
 	if match:	
 		texte=re.sub(pattern,'',texte)	
+	
+	pattern=re.compile(r'<img.*?><\/img>/gi',re.UNICODE)
+	match=re.search(pattern, texte)
+	if match:	
+		texte=re.sub(pattern,'/n IMAGE WAS HERE /n',texte)
+		print "found image"	
+
+	pattern=re.compile(r'#container.\d+{.+}\);',re.UNICODE)
+	match=re.search(pattern, texte)	
+	if match:	
+		texte=re.sub(pattern,'',texte)
+		print "\n 132123 \n"
 	
 	return texte	
 #----------------------------------------------------------------------------------
@@ -33,7 +45,7 @@ if not path.exists (out):
 	makedirs(out)
 
 listeCategory = ["politique", "economie", "sport", "culture", "sciences"]
-#listeCategory = ["politique",  "sport", "culture", "sciences"]
+#listeCategory = ["politique"]
 
 for category in listeCategory:
 	#out="./testfolder/"	
@@ -63,20 +75,24 @@ for category in listeCategory:
 
 			article1 = soup.find("div", {"id" : re.compile(r'.*article.*')})
             		article2 = soup.find("div", {"class" : re.compile(r'.*article.*')})
-            		container=soup.find("div", {"class" : re.compile(r'.*container.*')})
-		    	print container
+            		
+			#container=soup.find("div", {"class" : re.compile(r'.*container.*')})
+			#container=soup.find("img")		    	
+			#print container
 			
 			if article1 :
 				article=unicode(article1)
-				article=nettoyerHTML(article)
+				
 				article=BeautifulSoup(article, "html5lib")	
 				article = article.get_text()
+				article=nettoyerHTML(article)
 				article=unicode(article)
 			elif article2 :
 				article=unicode(article2)
-				article=nettoyerHTML(article)
+				
 				article=BeautifulSoup(article, "html5lib")	
 				article = article.get_text()
+				article=nettoyerHTML(article)
 				article=unicode(article)
 			else :
 				pass
