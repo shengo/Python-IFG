@@ -7,3 +7,5 @@ https://pip.pypa.io/en/stable/installing/
 #install treetaggerwrapper
 pip install treetaggerwrapper
 
+#install nltk
+pip install nltk
