@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Set these paths appropriately
+
+BIN=/home/gio/GitHub/Python-IFG/treetagger/bin
+CMD=/home/gio/GitHub/Python-IFG/treetagger/cmd
+LIB=/home/gio/GitHub/Python-IFG/treetagger/lib
+
+OPTIONS="-token -lemma -sgml"
+
+TOKENIZER=${CMD}/utf8-tokenize.perl
+TAGGER=${BIN}/tree-tagger
+PARFILE=${LIB}/russian-utf8.par
+
+# do tokenization
+$TOKENIZER $* |
+$TAGGER $OPTIONS $PARFILE

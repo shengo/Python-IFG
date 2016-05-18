@@ -73,8 +73,8 @@ if not path.exists (out): 	# si repertoire existe
 if not path.exists (outFortag): 	# si repertoire existe
 	makedirs(outFortag)		# si repertoire n'existe pas, cree
 
-listeCategory = ["politique", "economie", "sport", "culture", "sciences"] #les categories
-#listeCategory = ["politique"] #les categories
+#listeCategory = ["politique", "economie", "sport", "culture", "sciences"] #les categories
+listeCategory = ["politique"] #les categories
 
 for category in listeCategory:			# repertoires pour chaqun categorie
 	
@@ -127,16 +127,16 @@ for category in listeCategory:			# repertoires pour chaqun categorie
 				pass	#faire rien
 
 			if article :
-				with codecs.open(os.path.join(out , category, nomFichiers) , "w" , encoding="utf-8") as fout:
+				with codecs.open(os.path.join(out , category, nomFichiers) , "w" , encoding="utf-8") as fout: #ouvrir fichier
 					fout.write(article)
 					#print fout
-				fout.close() # finir
-				with codecs.open(os.path.join(outFortag,  category, nomFichiers), "w" ,encoding="utf-8") as fouttag:
+				fout.close() # fermer fichier
+				with codecs.open(os.path.join(outFortag,  category, nomFichiers), "w" ,encoding="utf-8") as fouttag: #ouvrir fichier
 				
 					tags=tagger.tag_text(article)      	               
 					for tag in tags:	
 				   		fouttag.write(tag+"\n")
-				fouttag.close()	
+				fouttag.close()	# fermer fichier
 
 
 
