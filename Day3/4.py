@@ -10,7 +10,9 @@ import codecs
 from os import path, makedirs
 import re
 import treetaggerwrapper
+import nltk
 from bs4 import BeautifulSoup
+from nltk import precision,recall
 out="./testregexp/"
 outFortag="./tags/"
 counter =0
