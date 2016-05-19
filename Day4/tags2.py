@@ -14,8 +14,28 @@ import collections
 from nltk.classify import NaiveBayesClassifier
 from nltk.corpus.reader import CategorizedTaggedCorpusReader	
 import random
-nltk.download()
+#nltk.download()
 
+#######################################################################
+
+def get_word_features(all_words, stop_words, n):
+	word_features=[]
+	for w in list(all_words.keys())[:n]:
+		if(not(w in stop_words)):
+			word_features.append(w)
+			
+	return word_features
+
+#######################################################################
+
+def sent_features(sent):
+	sent_words=set(sent)
+	features={}
+	for word in word_features:
+		features['contains(%s)'%word]=(word in sent_words)
+	return features
+
+#######################################################################
 
 tagger=treetaggerwrapper.TreeTagger(TAGLANG='fr',TAGDIR='../treetagger')
 
@@ -26,6 +46,8 @@ listeCategory = ["politique", "economie", "sport", "culture", "sciences"]	#les c
 
 if not path.exists (outputFolder): 	# si repertoire n'existe pas
 	makedirs(outputFolder)		# creer repertoire
+
+#######################################################################
 
 
 for category in listeCategory:		# repertoires pour chaqun categorie
@@ -64,7 +86,7 @@ for category in listeCategory:		# repertoires pour chaqun categorie
 
 
 
-leMonde=CategorizedTaggedCorpusReader(outputFolder, r'\w+\.txt', cat_pattern=r'\w+\.txt')
+leMonde=CategorizedTaggedCorpusReader(outputFolder, r'(\w+)\.txt', cat_pattern=r'(\w+)\.txt')
 #print leMonde
 total_carac=0
 total_mots=0
@@ -101,5 +123,36 @@ print "\n"
 print "\n"
 print total_vocals
 print "\n"
+
+
+
+documents=[(sent,category) 
+	for category in leMonde.categories() 
+	for sent in leMonde.sents(categories=category)]
+
+
+random.shuffle(documents)
+all_words=nltk.FreqDist(w.lower() for w in leMonde.words())
+stop_words=["!", "\"", "(", ")", ",", "-elle", "-il", ".", "/", ":", ";", "?", "a","alors", "ans", "apparemment", "assez",  "au", "aucun","aujourd'hui", "aussi", "autant", "autre", "autrement", "aux", "avait","avant", "avant hier", "avec", "avoir", "beaucoup", "bien", "bon", "car","ce", "cela", "cependant", "certainement", "certes", "ces", "cette", "ceux","chaque", "ci", "comme", 
+"comment", "d'abord", "dans", "davantage", "de", "dedans", "dehors", "demain", "depuis", "des", "deux", "devrait", "doit", "donc", "droite", "du","elle", "elles", "en",  "encore", "enfin", "ensuite",  "environ", "est", "et", "eu", "fait", "faites", "fois", "font","force", "grandement",  "habituellement",  "hier","ici", "il", "ils", "jadis", "jamais", "je", "joliment","la", "le", "les", "leur", "leurs", "longtemps", "lors", "ma", "maintenant", "mais", "mes", "moins","mon", "mot", "ne", "ni", "nommés","non", "notre", "nous", "nouveaux", "on", "ont", "ou", "oui","par", "parce que", "parfois", "pas", "personne", "personnes", "peu","peut", "peut-être", "pièce", "plupart", "plus", "plutôt", "point", "pour","pourquoi", "premièrement", "presque", "probablement","puis", "quand", "que", "quel", "quelle", "quelles", "quelque", "quelquefois", "quels","qui",  "resume", "rien", "sa", "sans", "se", "selon", "ses", "seulement", "si",  "soit", "son","sont", "soudain", "sous", "souvent", "soyez","suffisamment", "sur", "ta", "tandis", "tant", "tard", "tellement", "tel", "tels", "tes", "ton", "toujours", "tous", "tout", "toutefois", "trop", "tu",  "un", "une", "valeur",  "voie", "voient",  "votre", "vous", "y"]
+
+word_features=get_word_features (all_words, stop_words, 200)
+print word_features
+
+featuresets=[(sent_features(d),c)for (d,c) in documents]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	   
 
