@@ -1,0 +1,54 @@
+
+                                                                                                                
+   
+
+
+Trois ans après l’arrêt de sa chasse frénétique aux exoplanètes, en raison de défaillances techniques, les données accumulées par le télescope spatial américain Kepler constituent toujours une mine d’or pour les astronomes en quête de planètes tournant autour d’étoiles autres que notre soleil. Mardi 10 mai, la NASA a annoncé que le catalogue d’exoplanètes détectées par Kepler s’était enrichi de 1 284 nouvelles planètes validées, la plus grosse moisson de ce type jamais effectuée, à partir de 4 302 planètes « candidates ». Pour autant, l’agence spatiale américaine n’a pas annoncé la découverte formelle de nouvelles planètes ressemblant à la Terre, comme elle l’avait fait en juillet 2015 avec celle baptisée Kepler 452b.
+
+        Lire aussi :
+         
+    
+                Une planète ressemblant à la Terre découverte par la NASA
+    
+
+
+L’enrichissement spectaculaire du catalogue de Kepler résulte d’une nouvelle méthode d’identification des exoplanètes. Le télescope américain détecte des changements de luminosité des étoiles, qui résultent du passage dans sa ligne de visée d’une planète – mais d’autres phénomènes peuvent expliquer ces variations de luminosité, qu’il importe d’écarter avant de déclarer une exoplanète « confirmée ». Comme l’a expliqué Tim Morton (université de Princeton), « il faut démasquer des imposteurs, un processus qui demande du temps et des ressources ». Il faut en effet pointer des télescopes terrestres vers chaque planète candidate pour obtenir une confirmation indépendante de celle obtenue par l’observation des transits, chère à Kepler.
+
+   
+
+
+Des planètes dans la zone habitable
+Il a donc eu l’idée d’accélérer les choses en calculant la probabilité que le signal capté émane bien d’une exoplanète et non d’un « imposteur ». Quand cette probabilité était supérieure à 99 %, la planète était classée comme confirmée. « Ce mode de classement statistique a été présenté lors d’un colloque à Hawaï en décembre 2015, indique Anne-Marie Lagrange (Observatoire de Grenoble), spécialiste des exoplanètes. Il a donné lieu à des sessions assez tendues, car les tests proposés étaient variables d’une équipe à l’autre. » Ce classement statistique reste en outre pauvre en informations : un certain nombre de planètes semblent se situer dans la zone habitable – à une distance de leur étoile où l’eau peut être liquide et éventuellement aider à l’apparition de la vie. Mais pour déterminer si elles sont rocheuses, comme la Terre, il faudra d’autres observations.
+On ignore ainsi la nature exacte des planètes nouvelles considérées comme se trouvant dans la zone habitable, qui figurent ci-dessous en orange (les bleues sont celles qui avaient déjà été vérifiées).
+
+   
+
+
+« Ces neuf planètes oranges ont été ajoutées au panthéon de Kepler, qui en comptait déjà douze, se réjouit Natalie Batalha (NASA Ames Center, Californie). Plusieurs d’entre elles m’intriguent. J’espère que les astronomes pointeront leurs télescopes sur ces planètes. »
+Ces nouvelles données vont permettre d’effectuer des études de population, pour tenter de déduire la densité planétaire dans la zone galactique observée par Kepler. Pour en savoir plus sur chacune d’entre elles, l’autre grande méthode de détection des exoplanètes, dite des vitesses radiales, doit en effet être mise à contribution, afin d’apporter les indications complémentaires qui permettent de déduire la densité de l’astre, et d’étayer les hypothèses sur sa composition. Elle consiste à mesurer les variations de couleur de l’étoile induites par le mouvement de la planète autour d’elle. Cette danse modifie l’emplacement de l’étoile autour de leur centre de gravité commun. Comme le son de la sirène d’un camion de pompier, plus aigu lorsqu’il s’approche, plus grave lorsqu’il s’éloigne, ces mouvements périodiques par rapport à un observateur extérieur modifient la perception de la longueur d’onde de la lumière émise par l’étoile. « Mais ces vérifications demandent beaucoup de temps, et Kepler a observé des étoiles assez peu brillantes, difficiles à suivre en vitesse radiale », note Anne-Marie Lagrange, soulignant que le télescope spatial européen Plato, prévu pour 2024, observera lui des étoiles plus brillantes. Ce sera aussi le cas, à partir de 2018, du successeur de Kepler, « Transiting Exoplanet Survey Satellite » (TESS) qui, avec la même méthode du transit, va scruter pendant deux ans 200 000 des étoiles les plus brillantes dans notre voisinage cosmique.
+« Presque toutes les planètes ont une probabilité non nulle d’être de fausses alarmes. » Jean Schneider, astronome
+Un décompte à l’unité près ?
+Reste à savoir comment les nouvelles venues de Kepler seront classées dans les encyclopédies en ligne d’exoplanètes. Dans sa présentation, la NASA entretient un certain flou terminologique : les 1 284 nouvelles planètes sont « validées », mais pas « vérifiées ». Jean Schneider (Observatoire de Paris Meudon), qui tient à jour la plus ancienne (février 1995) et l’une des plus exhaustives (2 125 unités au 9 mai) de ces encyclopédies, va y ajouter « les 1 284 planètes « validées », puisqu’elles le sont à 99 % ». Cet ajout va prendre du temps, en raison du format des données
+
+        Lire aussi :
+         
+    
+                Exoplanètes : les voisines de l’étoile naine Trappist-1 sont-elles vraiment « habitables » ?
+    
+
+
+Un décompte à l’unité près n’a selon Jean Schneider pas de sens : « Il faut dire que (presque) toutes les planètes ont une probabilité non nulle (allant de ~0,1 % à ~10-50 %) d’être des fausses alarmes. Il y a donc un certain arbitraire à dire qu’une planète est validée. » D’autant plus, ajoute-t-il, qu’il n’y a pas de consensus sur la définition d’une planète : « Jusqu’à quelle masse dire que c’est une planète et pas une naine brune ? J’ai, pour ma part, provisoirement plaidé pour une limite maximum de 60 fois la masse de Jupiter. »
+
+   
+
+
+Mais le « contrôle qualité » de ces planètes extrasolaires lui semble en définitive satisfaisant. « L’expérience montre que sur les 2 100 planètes “validées” à ce jour, seule une dizaine a été invalidée », note-t-il. L’une d’entre l’a même été, pour être ensuite « réhabilitée ».
+
+        Lire aussi :
+         
+    
+                Tout comprendre aux exoplanètes, mondes lointains et fascinants
+    
+
+
+                        

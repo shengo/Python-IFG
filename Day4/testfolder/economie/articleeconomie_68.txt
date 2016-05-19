@@ -1,0 +1,14 @@
+
+                                                        
+                                
+                                
+                            
+                            
+Les dossiers médicaux de 1,6 million de patients londoniens ont été placés entre les mains d’une entreprise appartenant à Google : c’est ce qu’a révélé, à la fin du mois d’avril, l’hebdomadaire britannique New Scientist, déclenchant de nombreuses inquiétudes outre-Manche.
+Ces données, qui concernent les patients de trois hôpitaux de Londres gérés par le National Health Service (NHS), ont été confiées à Google DeepMind, une entreprise spécialiste de l’intelligence artificielle. Elle a été rendue célèbre cette année grâce aux exploits de son programme AlphaGo, le premier à avoir battu l’humain au jeu de go.
+Le partenariat entre le NHS et DeepMind n’avait rien de secret : en février, l’entreprise avait annoncé travailler avec cet organisme pour développer une application, Streams, aidant les médecins à surveiller les patients ayant des problèmes de reins. Mais un document dévoilé par le New Scientist montre que cet accord va bien plus loin que ce qui avait été annoncé.
+Ce ne sont pas seulement les dossiers des malades des reins qui ont été transmis à l’entreprise, mais ceux de tous les patients, et ces fichiers contiennent des données ultrasensibles remontant jusqu’à cinq ans : résultats d’examens, indications d’overdose, avortements, VIH, mais aussi des rapports quotidiens de l’hôpital sur l’activité du patient, son emplacement ou encore ses visiteurs.
+Les patients n’ont pas été informés
+Streams épluche ces données en temps réel pour aider le personnel hospitalier à détecter le plus rapidement possible les cas d’insuffisance rénale...
+
+                                                    
