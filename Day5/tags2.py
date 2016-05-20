@@ -49,7 +49,36 @@ if not path.exists (outputFolder): 	# si repertoire n'existe pas
 
 #######################################################################
 
+def precision_recall (classifier, test_set):
+	refsets=collections.defaultdict(set)
+	testset=collections.defaultdict(set)
+	for i, (sent, category) in enumerate(test_set):
+		refsets[category].add(i)
+		observed=classifier.classify(sent)
+		testset[observed].add(i)
+	prec={}
+	rapp={}
+	for category in leMonde.categories():
+		prec[category]=nltk.precision(refsets[category], testset[category])
+		rapp[category]=nltk.recall(refsets[category],testset[category])
+	return prec,rapp
 
+#######################################################################
+
+def fmesures():
+
+	for category in leMonde.categories():
+		preccision = PREC[category]
+		rappel = RAPP[category]
+		
+		if rappel+preccision==0:
+			print "for category", category , " : NONE\n"	
+		else:
+			f_mesure=(2 * preccision * rappel)/(preccision + rappel)
+			print "for category", category, "fmesure is" , f_mesure , "\n"
+
+
+#######################################################################
 for category in listeCategory:		# repertoires pour chaqun categorie
 	
 	FilePaths = inputFolder  + category		#chemin de qu'on ouvre/lire
@@ -94,7 +123,7 @@ total_phrases=0
 total_vocals=0
 
 for category in leMonde.categories():	
-	print "test \n"	
+	
 	nb_carac=len(leMonde.raw(categories=category))
 	nb_mots = len(leMonde.words(categories=category))
 	nb_phrases=len(leMonde.sents(categories=category))
@@ -109,19 +138,16 @@ for category in leMonde.categories():
 	
 
 print "\n"
-print total_carac
+print "total_carac: ", total_carac
 print "\n"
 
-print "\n"
-print total_mots
-print "\n"
-
-print "\n"
-print total_phrases
+print "total_mots: ", total_mots
 print "\n"
 
+print "total_phrases: ", total_phrases
 print "\n"
-print total_vocals
+
+print "total_vocals: ", total_vocals
 print "\n"
 
 
@@ -133,6 +159,7 @@ documents=[(sent,category)
 
 random.shuffle(documents)
 all_words=nltk.FreqDist(w.lower() for w in leMonde.words())
+
 stop_words=["!", "\"", "(", ")", ",", "-elle", "-il", ".", "/", ":", ";", "?", "a","alors", "ans", "apparemment", "assez",  "au", "aucun","aujourd'hui", "aussi", "autant", "autre", "autrement", "aux", "avait","avant", "avant hier", "avec", "avoir", "beaucoup", "bien", "bon", "car","ce", "cela", "cependant", "certainement", "certes", "ces", "cette", "ceux","chaque", "ci", "comme", "comment", "d'abord", "dans", "davantage", "de", "dedans", "dehors", "demain", "depuis", "des", "deux", "devrait", "doit", "donc", "droite", "du","elle", "elles", "en",  "encore", "enfin", "ensuite",  "environ", "est", "et", "eu", "fait", "faites", "fois", "font","force", "grandement",  "habituellement",  "hier","ici", "il", "ils", "jadis", "jamais", "je", "joliment","la", "le", "les", "leur", "leurs", "longtemps", "lors", "ma", "maintenant", "mais", "mes", "moins","mon", "mot", "ne", "ni", "nommés","non", "notre", "nous", "nouveaux", "on", "ont", "ou", "oui","par", "parce que", "parfois", "pas", "personne", "personnes", "peu","peut", "peut-être", "pièce", "plupart", "plus", "plutôt", "point", "pour","pourquoi", "premièrement", "presque", "probablement","puis", "quand", "que", "quel", "quelle", "quelles", "quelque", "quelquefois", "quels","qui",  "resume", "rien", "sa", "sans", "se", "selon", "ses", "seulement", "si",  "soit", "son","sont", "soudain", "sous", "souvent", "soyez","suffisamment", "sur", "ta", "tandis", "tant", "tard", "tellement", "tel", "tels", "tes", "ton", "toujours", "tous", "tout", "toutefois", "trop", "tu",  "un", "une", "valeur",  "voie", "voient",  "votre", "vous", "y"]
 
 word_features=get_word_features (all_words, stop_words, 300)
@@ -141,25 +168,41 @@ word_features=get_word_features (all_words, stop_words, 300)
 
 featuresets=[(sent_features(d),c)for (d,c) in documents]  # RAM overflow when many pages :(
 
-x = int((total_phrases*70)/100)
-y = int((total_phrases*30)/100)
+x = (total_phrases*70)/100
+y = (total_phrases*30)/100
 
 print "\n x: ", x, " y: ", y, "\n"
+
 
 train_set, test_set=featuresets[x:],featuresets[:y]
 #print "\n train_set: ", train_set, "\ntest_set: ", test_set, "\n"
 
-Classifier=nltk.NaiveBayesClassifier.train(train_set)
-Classifier.show_most_informative_features(10)
+print "\n most informative features: \n"
+Classifier = nltk.NaiveBayesClassifier.train(train_set)
+mif = Classifier.most_informative_features(10)
+print mif, "\n"
+
+#Vrai Positive, Vrai Negative, Faux Positive, Faux Negative
+#accuracy = (VP + VN)/(VP + VN + FP + FN))
+#
+
+
+accuracy = nltk.classify.accuracy(Classifier,test_set )
+print "accuracy is: ", accuracy, "\n"
+
+PrecisionRappel=precision_recall(Classifier, test_set)
+
+PREC=PrecisionRappel[0]
+RAPP=PrecisionRappel[1]
+print "\npreccision: ", PREC, "\n"
+print "\nrappel: ", RAPP, "\n"
+
+print "\n"
+
+fmesures()
 
 
 
 
 
-
-
-
-
-
-	   
 
