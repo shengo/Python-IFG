@@ -1,0 +1,1001 @@
+
+                                                                                                                
+   
+
+
+C’était après la canicule meurtrière de 2003 : le président Chirac et son gouvernement imaginent de sacrifier un jour férié pour financer une Caisse nationale de solidarité pour l’autonomie (CNSA). Assoupli en 2008, puis étendu aux retraités, le mécanisme rapporte plus de 3 milliards d’euros par an.
+1. Comment cette journée de solidarité est-elle née ?
+2003 : réagir après la canicule
+L’été 2003 a été marqué par une canicule qui a provoqué la mort prématurée de quelque 15 000 personnes, âgées pour la plupart.
+Fragilisé par son long silence estival, plombé par la gestion jugée calamiteuse du gouvernement de Jean-Pierre Raffarin, Jacques Chirac avait tenté de reprendre la main en annonçant une mesure symbolique : les Français allaient devoir travailler un jour férié pour financer la solidarité en faveur des personnes âgées.
+Le gouvernement songe d’abord au 8 Mai, avant de trancher en faveur du lundi de Pentecôte, qui présente un double avantage. D’abord, ce n’est pas une fête religieuse – seul le dimanche de Pentecôte l’est. Et par définition, le lundi de Pentecôte ne tombe jamais le week-end et permet d’obtenir des ressources constantes.
+2004 : une loi sur « l’autonomie »
+Le principe de cette journée de solidarité est retranscrit dans la loi du 30 juin 2004 :
+« Une journée de solidarité est instituée en vue d’assurer le financement des actions en faveur de l’autonomie des personnes âgées ou handicapées. Elle prend la forme d’une journée supplémentaire de travail non rémunéré pour les salariés et de la contribution [des employeurs pour financer] l’autonomie des personnes âgées et des personnes handicapées. »
+Le texte de loi précise qu’« en l’absence de convention ou d’accord, la journée de solidarité est le lundi de Pentecôte ».
+2008 : le lundi… ou pas
+Inégalement appliquée et cible de critiques récurrentes, la journée de solidarité est réformée en 2008. Depuis cette date, les entreprises sont libres de choisir le jour qui sera travaillé par les salariés pour financer la dépendance, qu’il s’agisse du lundi de Pentecôte ou d’un jour quelconque de l’année – à l’exception du jour de Noël ou du Vendredi Saint en Alsace et Moselle, soumis au Concordat.
+2. Qui travaille aujourd’hui, le lundi de Pentecôte ?
+L’assouplissement de 2008 donne plus de latitude aux employeurs : certains optent pour la suppression d’un jour de congé ou de réduction du temps de travail (RTT), d’autres en font cadeau à leurs salariés. Le principe général restant que les salariés travaillent 7 heures de plus dans l’année sans être payés. La SNCF, par exemple, avait décidé de répartir 1 minute 52 secondes de travail supplémentaire par jour.
+Selon une étude du groupe Randstad, menée en 2015 auprès de 25 de ses agences de travail temporaire, l’activité économique chute de 70 % en moyenne le lundi de Pentecôte. Résultat : 7 salariés sur 10 restent à la maison, avec toutefois des situations contrastées. L’industrie est quasi à l’arrêt, hormis certaines PME, alors que les services, en particulier les commerces fonctionnent presque normalement. Une situation proche d’un jour férié classique, et bien loin de l’année 2005, où 44 % de salariés travaillaient le lundi de Pentecôte.
+Le syndicat CFTC, qui déplore ces disparités entre les salariés (et plus encore avec les professions libérales, qui ne sont pas soumises à la contribution de solidarité), dénonce le principe de travailler gratuitement. Estimant que l’effort est injustement réparti, il a déposé en 2016 comme l’année précédente un mot d’ordre de grève pour « couvrir » tout salarié du privé qui décide de ne pas travailler à la Pentecôte.
+3. Comment cette journée rapporte-t-elle de l’argent ?
+Pour son travail, un employé perçoit un salaire. La journée supplémentaire – qu’il s’agisse du lundi de Pentecôte ou d’un jour quelconque – n’est pas payée en plus. Ce qui signifie que l’employeur est gagnant puisque, à salaire égal, son employé travaille davantage.
+En contrepartie de ce « gain », l’employeur doit verser 0,3 % de sa masse salariale à la Caisse nationale de solidarité pour l’autonomie. Cette contrepartie s’appelle la contribution solidarité autonomie (CSA). Les revenus du capital, hors épargne populaire type Livret A, sont également soumis à ce prélèvement de 0,3 %.
+Depuis le 1er avril 2013, les retraités et invalides assujettis à l’impôt sur le revenu doivent aussi contribuer à hauteur de 0,3 % de leurs pensions au financement de la dépendance en s’acquittant de la contribution additionnelle solidarité économie (CASA). Une manne destinée à financer la loi d’« adaptation de la société au vieillissement » entrée en vigueur au 1er janvier 2016.
+
+        Lire aussi :
+         
+    
+                La France à l’épreuve du grand âge
+    
+
+
+4. Combien la journée de solidarité rapporte-t-elle ?
+Selon la CNSA, la journée de solidarité devrait rapporter plus de 3 milliards d’euros pour l’année 2016 : 2,29 milliards d’euros financés par les contributions des salariés (CSA) et 726 millions versés par les retraités (CASA). Depuis sa mise en place en 2004, le montant total versé pour l’autonomie des personnes âgées et dépendantes dépasse les 30 milliards d’euros.
+
+
+	#container_14631458261{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14631458261{
+		height:450px;
+	}
+	#container_14631458261 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14631458261 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14631458261 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14631458261 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	La journée de solidarité a rapporté plus de 30 milliards d'euros depuis 2004
+	Montant annuel de la Contribution de solidarité autonomie (CSA, prélevée sur les salaires) et de la Contribution additionnelle de solidarité pour l'autonomie (CASA), prélevée sur les retraites depuis 2013.  
+	
+	Source : CNSA
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14631458261",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:"montant (en millions d'euros)"
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Contribution de solidarité autonomie (CSA)",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        911
+      ],
+      [
+        "",
+        1949
+      ],
+      [
+        "",
+        2085
+      ],
+      [
+        "",
+        2220
+      ],
+      [
+        "",
+        2296
+      ],
+      [
+        "",
+        2206
+      ],
+      [
+        "",
+        2239
+      ],
+      [
+        "",
+        2334
+      ],
+      [
+        "",
+        2389
+      ],
+      [
+        "",
+        2408
+      ],
+      [
+        "",
+        2430
+      ],
+      [
+        "",
+        2240
+      ],
+      [
+        "",
+        2290
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Contribution additionnelle de solidarité pour l'autonomie (CASA)",
+    "color": "#FFc832",
+    "data": [
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        478
+      ],
+      [
+        "",
+        684
+      ],
+      [
+        "",
+        720
+      ],
+      [
+        "",
+        726
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: 1,
+		valueDecimals: 0,
+		valuePrefix: "",
+		valueSuffix: " millions d'euros",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+5. Comment est utilisé l’argent ?
+En 2016, la Caisse nationale de solidarité autonomie doit redistribuer la contribution de solidarité versée par les salariés au profit des personnes âgées (60 % de la somme) et des handicapés (40 %). La majeure partie financera des établissements spécialisés (maisons de retraite, instituts pour handicapés) et l’autre sera reversée aux départements qui gèrent l’allocation personnalisée d’autonomie, la prestation de compensation du handicap et les maisons départementales des personnes handicapées.
+
+
+	#container_14631511765{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14631511765{
+		height:500px;
+	}
+	#container_14631511765 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14631511765 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14631511765 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14631511765 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Utilisation de la contribution de solidarité des salariés (CSA) en 2016
+	Environ 60 % des fonds sont alloués en majorité aux personnes âgées dépendantes, et les 40 % restants aux handicapés. (Survolez avec la souris pour connaître le détail)
+	
+	Source : CNSA
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = ["Dans le détail : allocation personnalisée d'autonomie (458,4 millions d'euros) + établissement pour personnes âgées (916,8 millions d'euros)","Dans le détail : prestation de compensation du handicap et maisons départementales des personnes handicapées (595,9 millions d'euros) + établissements pour personnes handicapées (320,9 millions d'euros)",""]
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14631511765",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "pie",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} M€",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} M€",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["Pour les personnes âgées","Pour le handicap"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "montant",
+    "showInLegend": true,
+    "data": [
+      {
+        "name": "Pour les personnes âgées",
+        "y": 1375.2,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Pour le handicap",
+        "y": 916.8,
+        "sliced": false,
+        "selected": false
+      }
+    ]
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: "",
+		valueDecimals: 1,
+		valuePrefix: "",
+		valueSuffix: " millions d'euros",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			if (annotation_spe[this.point.index] != undefined){
+				return tooltip.defaultFormatter.call(this, tooltip) + annotation_spe[this.point.index]
+			} else {
+				return tooltip.defaultFormatter.call(this, tooltip)
+			}
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+En revanche, la contribution additionnelle, prélevée sur les retraites et pensions, n’est pas entièrement utilisée pour des actions concrètes : en effet, elle a été créée en 2013 alors que la loi sur l’autonomie n’avait pas été votée, et une grande partie des 700 millions d’euros récoltés chaque année n’ont donc pas été utilisés jusqu’à présent. Même en 2016, plus d’un tiers de la somme reste en suspens.
+
+
+	#container_14631525685{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14631525685{
+		height:500px;
+	}
+	#container_14631525685 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14631525685 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14631525685 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14631525685 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	37 % de la contribution additionnelle, versée par les retraités (CASA), ne sera pas utilisée en 2016 
+	Survolez avec la souris pour connaître le détail de l'affectation des sommes récoltées.
+	
+	
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = ["revalorisation de l'APA à domicile (306 M€), prévention de la perte d'autonomie (127 M€), accompagnement des aidants (6 M€), réhabilitation des résidences autonomie (10 M€), abondement des fonds de compensation du handicap (5 M€)","Le CNSA assure que les recettes non utilisées en 2016 seront &quot;pleinement affectées&quot; au maintien de l'autonomie... plus tard"]
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14631525685",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "pie",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} M€",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} M€",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["Dépenses pour la perte d'autonomie","Somme conservée pour des dépenses futures"],
+		title: {
+			text: 0
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}M€"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": 2016,
+    "showInLegend": true,
+    "data": [
+      {
+        "name": "Dépenses pour la perte d'autonomie",
+        "y": 454.65,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Somme conservée pour des dépenses futures",
+        "y": 271.35,
+        "sliced": false,
+        "selected": false
+      }
+    ]
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: "  millions d'euros",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			if (annotation_spe[this.point.index] != undefined){
+				return tooltip.defaultFormatter.call(this, tooltip) + annotation_spe[this.point.index]
+			} else {
+				return tooltip.defaultFormatter.call(this, tooltip)
+			}
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Ces crédits « sous-utilisés » suscitent la colère de l’Association des directeurs au service des personnes âgées (AD-PA). « Les personnes âgées fragilisées sont considérées comme une non-priorité dans notre pays, et l’argent est repris à d’autres fins, pour le budget de l’Assurance-maladie ou des départements », déplore le directeur de l’AD-PA, Pascal Champvert. Il dénonce depuis des années un « détournement » par l’Etat de la CNSA, qu’il évalue à « 4,5 milliards depuis onze ans ». Un rapport de l’Inspection générale des affaires sociales évoquait en 2010 une somme de 1,8 milliard d’euros d’excédents non utilisés. « On trompe les salariés et retraités, à qui on demande de verser de l’argent pour les personnes âgées et handicapées », dénonce M. Champvert.
+Du côté de la Caisse nationale de solidarité, on explique que seule « une petite partie » des crédits sous-consommés a été réaffectée à l’Assurance-maladie (qui est l’un de ses principaux contributeurs). En 2014, pour compenser la « cagnotte » constituée par la CASA, l’Etat a également baissé une partie de ce qu’il verse au titre de la CSG : c’est donc une manière indirecte de détourner l’argent de la caisse vers les finances de l’Etat.
+La CNSA précise que les crédits non utilisés constituent des « réserves » pour l’organisme « qui peuvent être réaffectées les années suivantes à des dépenses liées [à son] champ d’intervention » et que les sommes prélevées sur les salaires et les retraites des Français, non utilisées en 2016, seront « pleinement affectées à la CNSA ».
+                        

@@ -1,0 +1,137 @@
+
+        
+
+            Compte rendu
+
+            Nigeria : appel à la grève contre la hausse du prix de l’essence
+
+
+            
+    Le Monde.fr avec AFP
+    
+        Le 16.05.2016 à 10h06
+    
+     •
+    
+        Mis à jour le 16.05.2016 à 11h04
+    
+
+            
+
+            
+                                    
+    
+        Dans une station-essence de la région du Delta, en décembre 2012.
+        Crédits : AKINTUNDE AKINLEYE/REUTERS
+    
+
+Mobilisés contre l’augmentation soudaine de 67 % du prix de l’essence à la pompe, les syndicats nigérians ont appelé, samedi 14 mai, à une grève illimitée « si mardi 17 mai à minuit, le gouvernement n’a pas ramené les tarifs à 86,5 nairas [0,38 euro/0,43 dollar] par litre ». Le Nigeria, dont 70 % des revenus dépendent du pétrole, est le premier producteur de brut d’Afrique.
+La fin de l’essence subventionnée, qui doit entraîner une hausse des prix à 145 nairas (0,64 euro/0,73 dollar) par litre, est censée s’accompagner d’une libéralisation du secteur qui permettrait à de nouveaux acteurs de se fournir en devises sur le marché parallèle pour importer du carburant. Objectif : mettre fin aux pénuries qui obligent depuis des mois les Nigérians à faire la queue devant les stations-service.
+
+Lire aussi : Au Nigeria, le président Buhari impuissant face à la crise
+
+L’effondrement des cours du baril, entraînant celui de la monnaie nationale, a en effet plongé le pays dans une grave crise financière. Pour soutenir le naira, le gouvernement a dû puiser dans ses réserves de change (62 milliards sur près de 100 milliards de dollars, soit 88 milliards d’euros). Les dollars manquent, les importations sont gelées (certaines sont interdites), le port de Lagos est pratiquement à l’arrêt. Abuja doit, en outre, composer avec une série de pannes sur les oléoducs, et surtout l’entrée en action en début d’année d’un groupe armé, les militants du Niger Delta Avengers, actifs dans la zone de production pétrolière.
+Le précédent de 2012
+Bien qu’il soit le premier producteur du continent, le Nigeria est contraint d’importer des produits pétroliers, ses quatre raffineries ne suffisant pas à sa consommation. Le gouvernement avait l’habitude de maintenir un prix à la pompe assez bas et de payer la différence aux importateurs, mais ces derniers prenaient régulièrement le pays en otage en refusant de distribuer le pétrole tant qu’ils n’avaient pas touché les subventions de l’Etat. En janvier 2012, le gouvernement avait déjà tenté de mettre fin à ces subventions, ce qui avait fait doubler les prix. Les violentes manifestations de dizaines de milliers de personnes, qui ont fait une dizaine de morts, avaient ensuite obligé Abuja à renoncer à cette mesure.
+D’après le Nigeria Labour Congress (NLC), à l’origine de l’appel à la mobilisation avec le Trade Union Congress (TUC), la grève devrait affecter les banques, les aéroports, les ports, les marchés et les administrations. Elle est également destinée à obliger le gouvernement à revenir sur la récente hausse des tarifs de l’électricité, dans un pays dont la production est à la peine, avec seulement 4 000 mégawatts pour 170 millions d’habitants.
+
+Lire aussi : François Hollande au Nigeria en aiguillon de la lutte internationale contre Boko Haram
+
+            
+        
+
+
+        
+
+
+            
+
+        
+   
+
+        
+    Sur le même sujet
+    
+        Qui est l’émir de Kano, dont Boko Haram veut la peau ?Vidéo
+    
+    
+        Tout comprendre de la stratégie des terroristes de Boko Haram
+    
+    
+        « Boko Haram est un attrape-tout de violence »
+    
+        
+        Les enfants, « chair à canon » de Boko Haram
+    
+    
+        IrokoTV à l’assaut de la vidéo mobile en Afrique
+    
+    
+        Le retour à la vie des captives de Boko Haram
+    
+
+    
+        Abonnez-vous à partir de 1 €
+    
+
+
+        
+
+    (function () {
+        'use strict';
+
+        require(['lmd/core/ux/outbrain'],
+            function (outbrain) {
+                var desktopOpts = { minWidth: 768 };
+                var mobileOpts = { maxWidth: 768 };
+
+                outbrain.insertTags(
+                    'js_footer_outbrain',
+                    [
+                        { id: 'AR_15', options: desktopOpts },
+                        { id: 'AR_16', options: desktopOpts },
+                        { id: 'MB_1', options: mobileOpts }
+                    ]
+                );
+
+                outbrain.load();
+            }
+         );
+    }());
+
+
+
+        
+    
+
+  
+    Vos réactions (0)
+  
+
+  
+  
+
+  
+
+
+
+require(["lmd.afrique.comments"], function(comments) {
+    comments.init(".js-comments");
+});
+
+
+        
+    Santé
+    Education supérieure
+    Procès Hissène Habré
+    Ile Maurice
+    Kenya
+    Événements
+    Niger
+    Développement
+    Togo
+    Burundi
+
+
+
+    

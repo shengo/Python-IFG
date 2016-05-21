@@ -1,0 +1,3983 @@
+
+                                                                                                                Face à des Français sur le plateau de France 2, François Hollande avait déclaré, le 14 avril, « oui ça va mieux » dans le pays. C’est sur ce thème que le président de la République sera interrogé, mardi 17 mai au matin sur Europe 1. L’Elysée entend communiquer sur les bons chiffres récents de l’économie française. Mais le retour des voyants au vert signale-t-il une vraie reprise sensible dans l’hexagone ?
+La croissance
+ÇA VA UN PEU MIEUX
+Oui, la croissance du produit intérieur brut (PIB), c’est-à-dire de la richesse nationale, est repartie à la hausse en 2015 (1,3 %, selon les chiffres de l’Insee annoncés mardi 17 mai) et devrait être encore supérieure en 2016 (1,5 % selon le gouvernement), après trois années de quasi-stagnation.
+
+
+	#container_14607104157{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14607104157{
+		height:500px;
+	}
+	#container_14607104157 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14607104157 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14607104157 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14607104157 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Une croissance timide et irrégulière
+	Taux de croissance du PIB par trimestre depuis 2007
+	
+	Source : INSEE
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14607104157",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#285a82","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} %",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:"Taux de croissance"
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} %",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "datetime",
+		 categories:null,
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value:%Y}"
+		},
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: 1334428600000,
+			label: {
+				useHTML: false,
+				text: "Election deFrançois Hollande",
+				textAlign: "right",
+				verticalAlign: "bottom",
+				x: 5,
+				y: -3
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: 1334428600000,
+			to: 2334528600000,
+			label: {
+				useHTML: false,
+				text: "Mandat de François Hollande",
+				textAlign: "",
+				align: "center",
+				verticalAlign: "top",
+				x: "",
+				y: 15
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Évolution du PIB ",
+    "color": "#285a82",
+    "data": [
+      [
+        1167692400000,
+        0.7
+      ],
+      [
+        1175464800000,
+        0.7
+      ],
+      [
+        1183327200000,
+        0.4
+      ],
+      [
+        1191276000000,
+        0.3
+      ],
+      [
+        1199228400000,
+        0.4
+      ],
+      [
+        1207087200000,
+        -0.5
+      ],
+      [
+        1214949600000,
+        -0.3
+      ],
+      [
+        1222898400000,
+        -1.6
+      ],
+      [
+        1230850800000,
+        -1.6
+      ],
+      [
+        1238623200000,
+        -0.1
+      ],
+      [
+        1246485600000,
+        0.1
+      ],
+      [
+        1254434400000,
+        0.7
+      ],
+      [
+        1262386800000,
+        0.4
+      ],
+      [
+        1270159200000,
+        0.7
+      ],
+      [
+        1278021600000,
+        0.6
+      ],
+      [
+        1285970400000,
+        0.5
+      ],
+      [
+        1293922800000,
+        1.1
+      ],
+      [
+        1301695200000,
+        -0.1
+      ],
+      [
+        1309557600000,
+        0.2
+      ],
+      [
+        1317506400000,
+        0.3
+      ],
+      [
+        1325458800000,
+        null
+      ],
+      [
+        1333317600000,
+        -0.3
+      ],
+      [
+        1341180000000,
+        0.3
+      ],
+      [
+        1349128800000,
+        -0.1
+      ],
+      [
+        1357081200000,
+        0.1
+      ],
+      [
+        1364853600000,
+        0.7
+      ],
+      [
+        1372716000000,
+        null
+      ],
+      [
+        1380664800000,
+        0.2
+      ],
+      [
+        1388617200000,
+        -0.2
+      ],
+      [
+        1396389600000,
+        -0.1
+      ],
+      [
+        1404252000000,
+        0.3
+      ],
+      [
+        1412200800000,
+        0.1
+      ],
+      [
+        1420153200000,
+        0.6
+      ],
+      [
+        1427925600000,
+        null
+      ],
+      [
+        1435788000000,
+        0.4
+      ],
+      [
+        1443736800000,
+        0.3
+      ],
+      [
+        1451689200000,
+        0.5
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: "%",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "%b %Y",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Cette amélioration reste néanmoins toute relative, pour plusieurs raisons :
+La conjoncture économique a été favorable ces derniers mois : l’euro faible, la baisse du cours du pétrole et des taux d’intérêts ont contribué aux deux tiers de la croissance en 2015, selon l’Insee. La hausse de la croissance est donc en partie déconnectée de l’action du gouvernement. Or cette situation reste fragile : l’euro est remonté face au dollar, les prix de l’or noir pourraient remonter d’ici la fin de l’année 2016, ainsi que les taux d’intérêts.La croissance française est restée inférieure à celle de la zone euro en 2015 (1,3 % contre 1,6 %), selon Eurostat.En 2012, le candidat François Hollande tablait dans son programme sur des prévisions de croissance nettement supérieures (2,25 % par an de 2015 à 2017).
+Le chômage
+ÇA VA TOUJOURS MAL
+La croissance de l’économie française n’est en tout cas pas assez importante pour générer des créations d’emplois en nombre suffisant pour réduire le nombre de chômeurs.
+Le gouvernement s’est certes félicité de la première « baisse trimestrielle significative » du chômage sous François Hollande au début de l’année : environ 50 000 personnes sans activité en moins, soit – 1,4 %. La baisse est plus modeste (– 0,4 %) si l’on compte aussi les demandeurs d’emploi en activité réduire (catégories B et C).
+Cette très légère embellie du début de l’année reste en revanche insuffisante pour considérer que « cela va mieux » sur le front de l’emploi. Elle survient en effet après une hausse de plus d’un million de demandeurs d’emploi (catégories A, B et C confondues) depuis l’élection de François Hollande, pour un taux de chômage de 10,3 %.
+
+
+	#container_14633887743{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14633887743{
+		height:500px;
+	}
+	#container_14633887743 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14633887743 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14633887743 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14633887743 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Le chômage en France depuis 2012
+	Nombre de demandeurs d'emploi des catégories A, B et C
+	
+	Source : Pôle Emploi
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14633887743",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#ffc832","#28beaa","#f19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:"normal",
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ff3232",
+			width: "",
+			value: 4330000 ,
+			label: {
+				useHTML: false,
+				text:"Niveau du chômage en mai 2012",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ff3232",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["janv. 12","févr. 12","mars 12","avr. 12","mai 12","juin 12","juil. 12","août 12","sept. 12","oct. 12","nov. 12","déc. 12","janv. 13","févr. 13","mars 13","avr. 13","mai 13","juin 13","juil. 13","août 13","sept. 13","oct. 13","nov. 13","déc. 13","janv. 14","févr. 14","mars 14","avr. 14","mai 14","juin 14","juil. 14","août 14","sept. 14","oct. 14","nov. 14","déc. 14","janv. 15","févr. 15","mars 15","avr. 15","mai 15","juin 15","juil. 15","août 15","sept. 15","oct. 15","nov. 15","déc. 15","janv. 16","févr. 16","mars 16"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ff3232",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ff3232",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Catégorie A ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        2868700
+      ],
+      [
+        "",
+        2881500
+      ],
+      [
+        "",
+        2887400
+      ],
+      [
+        "",
+        2892500
+      ],
+      [
+        "",
+        2922800
+      ],
+      [
+        "",
+        2943600
+      ],
+      [
+        "",
+        2982600
+      ],
+      [
+        "",
+        3020300
+      ],
+      [
+        "",
+        3053900
+      ],
+      [
+        "",
+        3091700
+      ],
+      [
+        "",
+        3118600
+      ],
+      [
+        "",
+        3131100
+      ],
+      [
+        "",
+        3183200
+      ],
+      [
+        "",
+        3197300
+      ],
+      [
+        "",
+        3216000
+      ],
+      [
+        "",
+        3250700
+      ],
+      [
+        "",
+        3254800
+      ],
+      [
+        "",
+        3265300
+      ],
+      [
+        "",
+        3278100
+      ],
+      [
+        "",
+        3245400
+      ],
+      [
+        "",
+        3298600
+      ],
+      [
+        "",
+        3277000
+      ],
+      [
+        "",
+        3298100
+      ],
+      [
+        "",
+        3307400
+      ],
+      [
+        "",
+        3326900
+      ],
+      [
+        "",
+        3348700
+      ],
+      [
+        "",
+        3350800
+      ],
+      [
+        "",
+        3361300
+      ],
+      [
+        "",
+        3386300
+      ],
+      [
+        "",
+        3394900
+      ],
+      [
+        "",
+        3417200
+      ],
+      [
+        "",
+        3414500
+      ],
+      [
+        "",
+        3443200
+      ],
+      [
+        "",
+        3456200
+      ],
+      [
+        "",
+        3483000
+      ],
+      [
+        "",
+        3492300
+      ],
+      [
+        "",
+        3488400
+      ],
+      [
+        "",
+        3502100
+      ],
+      [
+        "",
+        3514400
+      ],
+      [
+        "",
+        3533600
+      ],
+      [
+        "",
+        3554700
+      ],
+      [
+        "",
+        3550300
+      ],
+      [
+        "",
+        3550700
+      ],
+      [
+        "",
+        3567700
+      ],
+      [
+        "",
+        3550000
+      ],
+      [
+        "",
+        3580100
+      ],
+      [
+        "",
+        3569600
+      ],
+      [
+        "",
+        3580500
+      ],
+      [
+        "",
+        3552600
+      ],
+      [
+        "",
+        3591000
+      ],
+      [
+        "",
+        3531000
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Catégorie B ",
+    "color": "#ffc832",
+    "data": [
+      [
+        "",
+        559400
+      ],
+      [
+        "",
+        570300
+      ],
+      [
+        "",
+        568100
+      ],
+      [
+        "",
+        576000
+      ],
+      [
+        "",
+        577100
+      ],
+      [
+        "",
+        590000
+      ],
+      [
+        "",
+        592600
+      ],
+      [
+        "",
+        597500
+      ],
+      [
+        "",
+        600200
+      ],
+      [
+        "",
+        605800
+      ],
+      [
+        "",
+        617900
+      ],
+      [
+        "",
+        618400
+      ],
+      [
+        "",
+        624900
+      ],
+      [
+        "",
+        630100
+      ],
+      [
+        "",
+        637900
+      ],
+      [
+        "",
+        632900
+      ],
+      [
+        "",
+        635200
+      ],
+      [
+        "",
+        629000
+      ],
+      [
+        "",
+        641200
+      ],
+      [
+        "",
+        631500
+      ],
+      [
+        "",
+        637200
+      ],
+      [
+        "",
+        657400
+      ],
+      [
+        "",
+        645600
+      ],
+      [
+        "",
+        648800
+      ],
+      [
+        "",
+        650900
+      ],
+      [
+        "",
+        647600
+      ],
+      [
+        "",
+        657200
+      ],
+      [
+        "",
+        657000
+      ],
+      [
+        "",
+        661300
+      ],
+      [
+        "",
+        660500
+      ],
+      [
+        "",
+        663600
+      ],
+      [
+        "",
+        667700
+      ],
+      [
+        "",
+        674700
+      ],
+      [
+        "",
+        674300
+      ],
+      [
+        "",
+        673200
+      ],
+      [
+        "",
+        679100
+      ],
+      [
+        "",
+        680100
+      ],
+      [
+        "",
+        685800
+      ],
+      [
+        "",
+        687400
+      ],
+      [
+        "",
+        695300
+      ],
+      [
+        "",
+        701800
+      ],
+      [
+        "",
+        704300
+      ],
+      [
+        "",
+        707300
+      ],
+      [
+        "",
+        706100
+      ],
+      [
+        "",
+        716300
+      ],
+      [
+        "",
+        710900
+      ],
+      [
+        "",
+        714600
+      ],
+      [
+        "",
+        714800
+      ],
+      [
+        "",
+        709400
+      ],
+      [
+        "",
+        706400
+      ],
+      [
+        "",
+        720200
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Catégorie C ",
+    "color": "#28beaa",
+    "data": [
+      [
+        "",
+        838500
+      ],
+      [
+        "",
+        839100
+      ],
+      [
+        "",
+        860200
+      ],
+      [
+        "",
+        853600
+      ],
+      [
+        "",
+        858000
+      ],
+      [
+        "",
+        862500
+      ],
+      [
+        "",
+        864900
+      ],
+      [
+        "",
+        872800
+      ],
+      [
+        "",
+        867400
+      ],
+      [
+        "",
+        868800
+      ],
+      [
+        "",
+        873800
+      ],
+      [
+        "",
+        879200
+      ],
+      [
+        "",
+        878000
+      ],
+      [
+        "",
+        891400
+      ],
+      [
+        "",
+        888000
+      ],
+      [
+        "",
+        897500
+      ],
+      [
+        "",
+        898300
+      ],
+      [
+        "",
+        898000
+      ],
+      [
+        "",
+        913100
+      ],
+      [
+        "",
+        915000
+      ],
+      [
+        "",
+        915000
+      ],
+      [
+        "",
+        943300
+      ],
+      [
+        "",
+        946500
+      ],
+      [
+        "",
+        951600
+      ],
+      [
+        "",
+        956400
+      ],
+      [
+        "",
+        950400
+      ],
+      [
+        "",
+        952700
+      ],
+      [
+        "",
+        963700
+      ],
+      [
+        "",
+        966200
+      ],
+      [
+        "",
+        978800
+      ],
+      [
+        "",
+        988600
+      ],
+      [
+        "",
+        997100
+      ],
+      [
+        "",
+        1009700
+      ],
+      [
+        "",
+        1025300
+      ],
+      [
+        "",
+        1028000
+      ],
+      [
+        "",
+        1047100
+      ],
+      [
+        "",
+        1071100
+      ],
+      [
+        "",
+        1080500
+      ],
+      [
+        "",
+        1094000
+      ],
+      [
+        "",
+        1106800
+      ],
+      [
+        "",
+        1149800
+      ],
+      [
+        "",
+        1131900
+      ],
+      [
+        "",
+        1144700
+      ],
+      [
+        "",
+        1142700
+      ],
+      [
+        "",
+        1159200
+      ],
+      [
+        "",
+        1148900
+      ],
+      [
+        "",
+        1163500
+      ],
+      [
+        "",
+        1182700
+      ],
+      [
+        "",
+        1197700
+      ],
+      [
+        "",
+        1165400
+      ],
+      [
+        "",
+        1202900
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: 1,
+		valueDecimals: 0,
+		valuePrefix: "",
+		valueSuffix: " demandeurs d'emploi",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Surtout, le chômage continue d’affecter lourdement les jeunes : un jeune de moins de 25 ans sur quatre (24,6 %) est sans emploi.
+Les impôts
+ILS RESTENT PLUS ÉLEVÉS QU’EN 2012
+« Il y a moins d’impôts », assurait, sur le plateau de France 2, François Hollande le 14 avril, argumentant son « ça va mieux ».
+Si l’on raisonne en poids des impôts, taxes et cotisations rapportés à la richesse nationale, c’est-à-dire en taux de prélèvements obligatoires, celui-ci a en effet légèrement baissé en 2015, après avoir atteint son plus haut niveau sous François Hollande : il est ainsi passé de 44,9 % du PIB en 2014 à 44,5 % en 2015. Et les prévisions pour 2016 évoquent un chiffre de 44,2 %. En début de quinquennat, ce taux était de 43,8 % du PIB.
+
+
+	#container_14607329299{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14607329299{
+		height:500px;
+	}
+	#container_14607329299 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14607329299 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14607329299 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14607329299 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Evolution du taux de prélèvements obligatoires en France depuis 2007
+	En % du PIB
+	
+	Source : Insee
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14607329299",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["2007","2008","2009","2010","2011","2012","2013","2014","2015 (non définitifs)","2016 (prévisions)"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Prélèvements obligatoires (% PIB) ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        42.1
+      ],
+      [
+        "",
+        41.9
+      ],
+      [
+        "",
+        41
+      ],
+      [
+        "",
+        41.3
+      ],
+      [
+        "",
+        42.6
+      ],
+      [
+        "",
+        43.8
+      ],
+      [
+        "",
+        44.7
+      ],
+      [
+        "",
+        44.9
+      ],
+      [
+        "",
+        44.5
+      ],
+      [
+        "",
+        44.2
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: "%",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Il y a en revanche plusieurs raisons de nuancer cette baisse récente :
+Le taux de prélèvements obligatoires prévu pour 2016 place toujours la France parmi les « champions » de la pression fiscale : elle reste l’un des pays de l’OCDE où le poids de la fiscalité rapporté au PIB est le plus élevé, en deuxième position derrière le Danemark.Tous les impôts n’ont pas baissé : selon le budget 2016, le taux moyen d’impôt sur le revenu devrait poursuivre sa hausse en 2016, malgré les baisses promises aux ménages les moins aisés. Le taux d’impôt sur les sociétés, lui, au contraire, diminue.Et en valeur absolue, le montant des impôts, taxes et cotisations collectés a augmenté, passant de 946,7 milliards d’euros en 2013 à 975,3 milliards d’euros en 2015.
+
+
+	#container_14607322405{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14607322405{
+		height:500px;
+	}
+	#container_14607322405 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14607322405 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14607322405 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14607322405 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Evolution des principaux prélèvements obligatoires de l'Etat de 2008 à 2016
+	Produits régaliens nets, en % du PIB
+	
+	Sources : Insee, Ministère du budget, Insee
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = [" "]
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14607322405",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "line",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["2008","2009","2010","2011","2012","2013","2014","2015 (non définitifs)","2016 (prévisions)"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Impôt sur le revenu ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        2.6
+      ],
+      [
+        "",
+        2.4
+      ],
+      [
+        "",
+        2.4
+      ],
+      [
+        "",
+        2.5
+      ],
+      [
+        "",
+        2.9
+      ],
+      [
+        "",
+        3.1
+      ],
+      [
+        "",
+        3.2
+      ],
+      [
+        "",
+        3.2
+      ],
+      [
+        "",
+        3.3
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "Impôt sur les sociétés ",
+    "color": "#FFc832",
+    "data": [
+      [
+        "",
+        2.6
+      ],
+      [
+        "",
+        1.6
+      ],
+      [
+        "",
+        1.8
+      ],
+      [
+        "",
+        2
+      ],
+      [
+        "",
+        1.8
+      ],
+      [
+        "",
+        2
+      ],
+      [
+        "",
+        1.7
+      ],
+      [
+        "",
+        1.6
+      ],
+      [
+        "",
+        1.5
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": "TVA ",
+    "color": "#ff3232",
+    "data": [
+      [
+        "",
+        6.6
+      ],
+      [
+        "",
+        6.6
+      ],
+      [
+        "",
+        6.5
+      ],
+      [
+        "",
+        6.4
+      ],
+      [
+        "",
+        6.5
+      ],
+      [
+        "",
+        6.5
+      ],
+      [
+        "",
+        6.5
+      ],
+      [
+        "",
+        6.6
+      ],
+      [
+        "",
+        6.6
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: "%",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			if (annotation_spe[this.point.index] != undefined){
+				return tooltip.defaultFormatter.call(this, tooltip) + annotation_spe[this.point.index]
+			} else {
+				return tooltip.defaultFormatter.call(this, tooltip)
+			}
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Le déficit public
+ÇA VA PLUTÔT MOINS MAL
+Le déficit public a reculé depuis 2012, comme l’a affirmé François Hollande sur France 2 en avril, passant de 4,8 % du PIB à 3,6 % en 2015. C’était même un peu mieux que prévu (3,8 %).
+
+
+	#container_14607115061{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14607115061{
+		height:500px;
+	}
+	#container_14607115061 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14607115061 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14607115061 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14607115061 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Le déficit public se résorbe lentement depuis 2010
+	Déficit public en milliards d'euros
+	
+	Source : INSEE
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14607115061",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#285a82","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y}  Mds €",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value}  Mds €",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: 5,
+			to: 9,
+			label: {
+				useHTML: false,
+				text: "Mandat de François Hollande",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "bottom",
+				x: "",
+				y: -7
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Déficit",
+    "color": "#285a82",
+    "data": [
+      [
+        "",
+        -49.5
+      ],
+      [
+        "",
+        -63.5
+      ],
+      [
+        "",
+        -138.9
+      ],
+      [
+        "",
+        -135.8
+      ],
+      [
+        "",
+        -105
+      ],
+      [
+        "",
+        -100.4
+      ],
+      [
+        "",
+        -85.4
+      ],
+      [
+        "",
+        -84.8
+      ],
+      [
+        "",
+        -77.4
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: "milliards d'euros",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Ces résultats restent néanmoins mitigés pour plusieurs motifs :
+Le déficit reste à un niveau supérieur aux exigences budgétaires européennes (3 % maximum), auxquelles la France doit répondre d’ici 2017.La cour des comptes est sceptique sur les prévisions de déficit du gouvernement pour 2016.Le déficit est bien supérieur aux promesses de François Hollande. Pendant la campagne présidentielle, le candidat socialiste tablait sur un retour sous les 3 % dès 2013, et un déficit public de 1,6 % en 2015, soit près de deux points de moins que ce qu’il a finalement été.
+Pouvoir d’achat et consommation
+ÇA VA PLUTÔT MOINS MAL
+Après deux années de baisse, le pouvoir d’achat est reparti à la hausse à partir de 2014. Au total, il a augmenté de 1,9 % de 2011 à 2015. Une nuance tout de même : il ne s’agit que d’un indicateur général sur la population française. Tous les Français ne bénéficient donc pas de cette hausse, selon leur situation individuelle.
+
+
+	#container_14607244914{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14607244914{
+		height:500px;
+	}
+	#container_14607244914 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14607244914 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14607244914 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14607244914 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Les ménages voient leur pouvoir d'achat augmenter petit à petit
+	Variation du revenu disponible brut par année entre 2007 et 2015
+	
+	Source : INSEE
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14607244914",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#285a82","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} %",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} %",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: 9,
+			to: 4.9,
+			label: {
+				useHTML: false,
+				text: "Mandat de François Hollande",
+				textAlign: "",
+				align: "center",
+				verticalAlign: "top",
+				x: "",
+				y: 15
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Pouvoir d'achat ",
+    "color": "#285a82",
+    "data": [
+      [
+        "",
+        3
+      ],
+      [
+        "",
+        0.3
+      ],
+      [
+        "",
+        1.6
+      ],
+      [
+        "",
+        1.2
+      ],
+      [
+        "",
+        0.2
+      ],
+      [
+        "",
+        -0.9
+      ],
+      [
+        "",
+        -0.1
+      ],
+      [
+        "",
+        1.1
+      ],
+      [
+        "",
+        1.8
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: " %",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+La consommation de biens a, elle, augmenté de 2 % entre janvier 2012 et janvier 2016. Une hausse timide à mettre en parallèle avec le taux d’épargne des ménages qui reste très élevé, ce qui ne favorise pas l’activité économique.
+
+
+	#container_14634001193{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14634001193{
+		height:500px;
+	}
+	#container_14634001193 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14634001193 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14634001193 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14634001193 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Les dépenses de consommation des ménages en biens stagnent depuis 2012
+	Niveaux en millions d'euros aux prix de l'année précédente
+	
+	Source : Insee
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14634001193",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["janv.-12","févr.-12","mars-12","avr.-12","mai-12","juin-12","juil.-12","août-12","sept.-12","oct.-12","nov.-12","déc.-12","janv.-13","févr.-13","mars-13","avr.-13","mai-13","juin-13","juil.-13","août-13","sept.-13","oct.-13","nov.-13","déc.-13","janv.-14","févr.-14","mars-14","avr.-14","mai-14","juin-14","juil.-14","août-14","sept.-14","oct.-14","nov.-14","déc.-14","janv.-15","févr.-15","mars-15","avr.-15","mai-15","juin-15","juil.-15","août-15","sept.-15","oct.-15","nov.-15","déc.-15","janv.-16"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": " ",
+    "color": "#0386c3",
+    "data": [
+      [
+        "",
+        42861
+      ],
+      [
+        "",
+        43852
+      ],
+      [
+        "",
+        42628
+      ],
+      [
+        "",
+        42786
+      ],
+      [
+        "",
+        42833
+      ],
+      [
+        "",
+        42863
+      ],
+      [
+        "",
+        42994
+      ],
+      [
+        "",
+        42679
+      ],
+      [
+        "",
+        42755
+      ],
+      [
+        "",
+        42711
+      ],
+      [
+        "",
+        42670
+      ],
+      [
+        "",
+        42432
+      ],
+      [
+        "",
+        42675
+      ],
+      [
+        "",
+        42633
+      ],
+      [
+        "",
+        42916
+      ],
+      [
+        "",
+        42719
+      ],
+      [
+        "",
+        43031
+      ],
+      [
+        "",
+        42381
+      ],
+      [
+        "",
+        42662
+      ],
+      [
+        "",
+        42474
+      ],
+      [
+        "",
+        42530
+      ],
+      [
+        "",
+        42598
+      ],
+      [
+        "",
+        43369
+      ],
+      [
+        "",
+        43038
+      ],
+      [
+        "",
+        42427
+      ],
+      [
+        "",
+        42354
+      ],
+      [
+        "",
+        42505
+      ],
+      [
+        "",
+        42446
+      ],
+      [
+        "",
+        42521
+      ],
+      [
+        "",
+        42898
+      ],
+      [
+        "",
+        42700
+      ],
+      [
+        "",
+        42885
+      ],
+      [
+        "",
+        42566
+      ],
+      [
+        "",
+        42544
+      ],
+      [
+        "",
+        42842
+      ],
+      [
+        "",
+        43225
+      ],
+      [
+        "",
+        43492
+      ],
+      [
+        "",
+        43512
+      ],
+      [
+        "",
+        43201
+      ],
+      [
+        "",
+        43244
+      ],
+      [
+        "",
+        43286
+      ],
+      [
+        "",
+        43407
+      ],
+      [
+        "",
+        43582
+      ],
+      [
+        "",
+        43619
+      ],
+      [
+        "",
+        43658
+      ],
+      [
+        "",
+        43611
+      ],
+      [
+        "",
+        43064
+      ],
+      [
+        "",
+        43502
+      ],
+      [
+        "",
+        43766
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 0,
+		valuePrefix: "",
+		valueSuffix: " millions d'euros",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Le logement
+ÇA VA TOUJOURS MAL
+Point noir majeur, le marché du logement a entrevu une éclaircie au premier trimestre. Selon les chiffres publiés jeudi 28 avril par le ministère du logement, les mises en chantier de logements neufs se sont établies à 84 000 au premier trimestre, soit 3 % de hausse par rapport à la même période de 2015. Sur un an, elles ont augmenté de 3,5 %.
+Cette hausse ne saurait toutefois cacher la plongée générale de l’investissement des ménages dans l’immobilier ces dernières années.
+
+
+	#container_14633930031{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14633930031{
+		height:500px;
+	}
+	#container_14633930031 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14633930031 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14633930031 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14633930031 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	L'investissement des ménages continue de chuter
+	Formation brute de capital fixe des ménages (volume en millions d'euros)
+	
+	Source : Insee
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14633930031",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "line",
+		spacingBottom: 10
+	},
+	colors:["#285a82","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: 1,
+		max: 27000,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["janvier 2012","avril 2012","août 2012","octobre 2012","janvier 2013","avril 2013","août 2013","octobre 2013","janvier 2014","avril 2014","août 2014","octobre 2014","janvier 2015","avril 2015","août 2015","octobre 2015","janvier 2016"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "Présidence de François Hollande",
+				textAlign: "",
+				align: "center",
+				verticalAlign: "top",
+				x: "",
+				y: 15
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Volume ",
+    "color": "#285a82",
+    "data": [
+      [
+        "",
+        26745
+      ],
+      [
+        "",
+        26577
+      ],
+      [
+        "",
+        26387
+      ],
+      [
+        "",
+        26214
+      ],
+      [
+        "",
+        26292
+      ],
+      [
+        "",
+        26353
+      ],
+      [
+        "",
+        26113
+      ],
+      [
+        "",
+        25606
+      ],
+      [
+        "",
+        25102
+      ],
+      [
+        "",
+        24759
+      ],
+      [
+        "",
+        24520
+      ],
+      [
+        "",
+        24447
+      ],
+      [
+        "",
+        24331
+      ],
+      [
+        "",
+        24107
+      ],
+      [
+        "",
+        23990
+      ],
+      [
+        "",
+        23779
+      ],
+      [
+        "",
+        23724
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  },
+  {
+    "name": null,
+    "color": "#FFc832",
+    "data": [
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ],
+      [
+        "",
+        null
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 0,
+		valuePrefix: 0,
+		valueSuffix: " millions d'euros ",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Difficile pour l’heure de savoir si cette hausse, timide, peut avoir une quelconque pérennité, d’autant que, rappelle Eric Dor, économiste à l’Iéseg, école de commerce lilloise, « le nombre de permis de construire est encore limité aux deux tiers de son niveau d’avant-crise ».
+
+        Lire aussi :
+         
+    
+                La timide reprise du marché du logement se confirme
+    
+
+
+Les entreprises
+ÇA VA UN PEU MIEUX
+Défaillances d’entreprises en diminution de 10 %, amélioration des taux de marge, hausse de l’investissement… Les indicateurs sont également au vert pour les entreprises, portées par une conjoncture favorable, et des politiques de l’offre comme le crédit d’impôt compétitivité emploi (CICE) qui jouent sur la compétitivité.
+La reprise progressive de l’investissement des entreprises semble montrer la voie d’une amélioration, qui va de pair avec une meilleure confiance des acteurs économiques.
+
+
+	#container_14633910831{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14633910831{
+		height:500px;
+	}
+	#container_14633910831 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14633910831 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14633910831 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14633910831 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Reprise lente de l'investissement des entreprises 
+	Formation brute de capital fixe des entreprises non financières (volume en millions d'euros)
+	
+	Source : Insee
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14633910831",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "column",
+		spacingBottom: 10
+	},
+	colors:["#285a82","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: 1,
+		max: 70000,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["janvier 2012","avril 2012","août 2012","octobre 2012","janvier 2013","avril 2013","août 2013","octobre 2013","janvier 2014","avril 2014","août 2014","octobre 2014","janvier 2015","avril 2015","août 2015","octobre 2015","janvier 2016"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#f7e5e5",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#f7e5e5",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "Présidence de François Hollande",
+				textAlign: "",
+				align: "center",
+				verticalAlign: "top",
+				x: "",
+				y: 15
+			}
+		}]
+	},
+	legend:{
+		enabled:"",
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Investissement ",
+    "color": "#285a82",
+    "data": [
+      [
+        "",
+        60806
+      ],
+      [
+        "",
+        60695
+      ],
+      [
+        "",
+        60649
+      ],
+      [
+        "",
+        60450
+      ],
+      [
+        "",
+        60244
+      ],
+      [
+        "",
+        60764
+      ],
+      [
+        "",
+        61362
+      ],
+      [
+        "",
+        62181
+      ],
+      [
+        "",
+        62074
+      ],
+      [
+        "",
+        62201
+      ],
+      [
+        "",
+        62592
+      ],
+      [
+        "",
+        62535
+      ],
+      [
+        "",
+        63095
+      ],
+      [
+        "",
+        63426
+      ],
+      [
+        "",
+        63686
+      ],
+      [
+        "",
+        64344
+      ],
+      [
+        "",
+        65397
+      ]
+    ],
+    "type": "",
+    "lineWidth": 2,
+    "yAxis": 0,
+    "stack": "null",
+    "visible": true,
+    "dataLabels": {
+      "enabled": 0
+    }
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 1,
+		valuePrefix: "",
+		valueSuffix: " millions d'euros",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Celle-ci pourra-t-elle durer et provoquer des créations d’emploi ? Denis Ferrand, directeur général de Coe-Rexecode (proche du patronat) se montre prudent :
+« Le plus dur pour les entreprises est passé, mais on ne peut pas dire que le redémarrage soit encore là. Jamais les entreprises n’ont mis autant de trésorerie de côté. »
+Pour Henri Sterdyniak, économiste à l’Observatoire français des conjonctures économiques (OFCE), « rétablir le taux de marge des entreprises ne suffit pas à créer de l’emploi. On reste dans une situation fragile, au prix d’une politique budgétaire restrictive qui est aussi destructrice d’emplois ».
+Les perspectives pour les mois qui viennent
+C’EST ENCORE FRAGILE
+L’OFCE insiste, dans une note publiée en avril, sur « des signaux positifs » pour l’économie française, comme les créations d’emplois ou la hausse du taux de marge des entreprises. Pour l’organisme, si le pays reste « loin d’une croissance vigoureuse », il semblerait « entamer sa lente convalescence, notamment par le redressement du pouvoir d’achat des ménages, la baisse du chômage, l’amélioration de la compétitivité des entreprises et la réduction du déficit public ».
+L’Institut national de la statistique et des études économiques (Insee) note également un contexte pour l’heure favorable à l’économie française, notamment grâce à une inflation faible, liée à la baisse des prix du pétrole, alors que le pouvoir d’achat augmente.
+Des prévisions nuancées par les « divers aléas » associés à ces signaux encourageants. Le ralentissement des économies émergentes pourrait ainsi être plus marqué que prévu et peser sur le commerce mondial, tout comme la situation incertaine de certains pays proches dans les mois à venir (Royaume-Uni, Grèce, etc.). Les prix du pétrole, quant à eux, pourraient bien repartir à la hausse dans les mois qui viennent.
+                        

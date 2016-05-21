@@ -1,0 +1,135 @@
+
+   
+
+   
+      
+         
+            
+                La Fondation Jean-Jaurès peut-elle sauver la gauche ? 
+                  
+                édition abonné
+
+
+               
+                  Le Monde
+ |
+                  13.05.2016 à 15h56
+ • Mis à jour le
+16.05.2016 à 08h57
+               
+
+               Le 3 mai, c’est sous l’égide de ce think tank socialiste que François Hollande a prononcé son discours d’entrée en campagne. Le président compte sur ce laboratoire d’idées transcourant pour réunir ses troupes. Pas sûr pourtant qu’il soit si fédérateur.
+
+               Par                             Laurent Telo
+
+
+               
+
+               
+                     
+François Hollande a peut-être trouvé l’homme providentiel qui va peut-être – ce qui fait beaucoup de peut-être on vous l’accorde – le sauver, lui et le Parti socialiste, d’un anéantissement nucléaire programmé. Cet homme n’est pas Stéphane Le Foll, ministre de l’agriculture et des onomatopées (« Hé oh la gauche !). Non, son sauveur, François Hollande l’a désigné de façon subliminale le 3 mai au moment précis où il grimpait, sans manquer de se casser la figure cette fois, les quelques marches pour fouler l’avant-scène du Théâtre du Rond-Point et entamer, avec moult saillies ronflantes, son discours d’entrée en campagne. D’ailleurs, il ne pleuvait pas dans la salle, ce qui est un signe. L’instant et le cadre étaient même d’une belle solennité, l’estrade pliait sous le poids des symboles.
+
+Sous l’égide de la Fondation Jean-Jaurès dont le président concluait le colloque « La gauche et le pouvoir », on fêtait les 80 ans, jour pour jour, du Front populaire de Léon Blum, l’année des 20 ans de la mort de François Mitterrand et les presque quatre ans du quinquennat de François Hollande… Au moment où celui-ci montait sur scène donc, sous le regard attentif de Manuel Valls à peine débarqué d’Océanie, et d’une bonne partie de son gouvernement, le président a pris dans ses bras le prochain messie du PS pour une accolade longue et remarquée. Il est vrai que celui-ci avait perdu sa maman la veille – ça peut arriver au meilleur des messies – mais c’est une accolade qui, politiquement, en disait long, on vous assure. Cet homme s’appelle Gilles Finchelstein, il n’est pas un élu...
+
+                                 
+
+                  
+
+            //sas_manager.render(25258);
+            ADVERT_AD(['50270/361897', 25258, '', 'parallax', '']);
+         
+         
+            <a href="http://ww690.smartadserver.com/call/pubjumpi/50270/361897/25258/S/1463382192/?" target="_blank">
+               <img src="http://ww690.smartadserver.com/call/pubi/50270/361897/25258/S/1463382192/?" border="0" alt=""></a>
+         
+                        
+                  require(["lmd/core/ux/longform"], function (advertLongform) {
+                     advertLongform.moveAdvert('[data-adformat=parallax]', '#articleBody');
+                  });
+                  
+
+                  
+   L’accès à la totalité de l’article est protégé Déjà abonné ? Identifiez-vous
+   
+   
+      
+         
+            La Fondation Jean-Jaurès peut-elle sauver la gauche ?
+            Il vous reste 91% de l'article à lire
+         
+      
+   
+   
+      Achetez cet article 2 €
+      Abonnez-vous à partir de 1 €
+      Découvrez l’édition abonnés
+   
+
+
+require(["jquery","lmd/core/auth"], function($, auth){
+   if (auth.isUserEducation()) {
+
+      $(".js_educ").attr("href","/cgi-bin/ACHATS/acheter.cgi?offre=ARCHIVES&type_item=ART_RESTREINT_ARCHIVE&objet_id=4919285&clef=ARTRESTR_HA2E");
+      $(".js_educ").html("Débitez votre pack d'archives");
+      $(".js_educ_abo").hide();
+
+      }
+});
+
+
+
+
+
+document.getElementById('teaser_article').style.display = 'block';
+
+require(["lmd/core/auth", "lmd/module/achat_acte/verif_achat_item"], function(auth, verif_achat_item)
+{
+   auth.loadUser().done(
+      function()
+      {
+         if (auth.user !== null && typeof lmd.context.item != 'undefined' && typeof lmd.context.item.id != 'undefined')
+         {
+            verif_achat_item.verifAchatItem(lmd.context.item.id);
+         }
+      } );
+});
+
+
+<div class="article_noscript">
+   <div class="teaser_article">
+      <p class="clearfix entete"><strong class="gras grid_6 alpha omega">L’accès à la totalité de l’article est protégé </strong><span class="grid_3 alpha omega txt_gris_moyen txt1">Déjà abonné ? <a href="#" class="js_trigger_login_register" data-route="connexion">Identifiez-vous</a></span></p>
+      <div class="bordt1 bord_gris_clair clearfix">
+   <div class="liste_img_lien grid_6 alpha omega pad16">
+      <figure class="grid_6 alpha">
+<img width="92" height="61" data-lazyload="false" data-placeholder="true" src="http://s1.lemde.fr/image/2016/05/13/92x61/4919279_7_7118_francois-hollande-a-la-fondation_0ada76b5047fff30d295f0402682def8.jpg" alt="François Hollande, à la Fondation Jean-Jaurès, à Paris, le 3 mai." title="Philippe Wojazer / AFP" onload="lmd.pic(this);" onerror="lmd.pic(this);" class="lazy-retina">         <figcaption class="padl8 padr16">
+            <h3 class="txt3_120 mgb8">La Fondation Jean-Jaur&egrave;s peut-elle sauver la gauche&nbsp;?</h3>
+            <span class="txt1 txt_gris_moyen normal">Il vous reste 91% de l'article à lire</span>
+         </figcaption>
+      </figure>
+   </div>
+   <p class="grid_4 omega  padt16 bts">
+      <a href="/cgi-bin/ACHATS/acheter.cgi?offre=ARCHIVES&produit_id=186&type_item=ART_RESTREINT_365J&login_requis=1&mdp=1&op=acheter_produit&objet_id=4919285&clef=ARTRESTR_HA2E" class="btn_fonce txt2 js_educ">Achetez cet article 2 &euro;</a>
+      <a href="http://www.lemonde.fr/abo/?clef=BLOCABOARTRESTR14" class="btn_abo txt2 js_educ_abo" onclick="javascript: return xt_click(this, 'C', lmd.context.page.xiti.xtn2, 'entrees_tunnel_achat_unite::liens_articles_teaser','N');">Abonnez-vous à partir de 1 &euro;</a>
+      <a href="/teaser/?clef=TEASERARTRESTR14" onclick="return xt_click(this, 'C', '19', 'entrees_tunnel_abo::decouvrez','N');" class="chevron txt1">Découvrez l’édition abonnés</a>
+   </p>
+</div>
+<script>
+require(["jquery","lmd/core/auth"], function($, auth){
+   if (auth.isUserEducation()) {
+
+      $(".js_educ").attr("href","/cgi-bin/ACHATS/acheter.cgi?offre=ARCHIVES&type_item=ART_RESTREINT_ARCHIVE&objet_id=4919285&clef=ARTRESTR_HA2E");
+      $(".js_educ").html("Débitez votre pack d'archives");
+      $(".js_educ_abo").hide();
+
+      }
+});
+</script>   </div>
+</div>
+
+
+
+
+            
+         
+      
+   

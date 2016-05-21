@@ -1,0 +1,387 @@
+
+                                                                                                                
+   
+
+
+Cinquième étape du championnat du monde de formule 1, le Grand Prix d’Espagne, qui se court dimanche 15 mai à Barcelone sur le circuit de Catalogne, est l’occasion pour les écuries d’effectuer les premiers ajustements tactiques.
+Esteban Ocon aux essais
+
+   Bad luck for us In The #SpanishGP FP1, a puncture In The 1st run and a battery issue In The 2nd. Onto The test Now! https://t.co/laaoUqfLRt— OconEsteban (@Esteban Ocon)
+   
+
+require(["twitter/widgets"]);
+
+Cela a commencé, vendredi 13 mai, lors des premiers essais libres, avec la participation du pilote de réserve Esteban Ocon au volant d’une Renault RS16. Des débuts cependant gâchés par une crevaison et un problème de batterie pour le champion d’Europe de formule 3 en 2014, puis champion de GP3 en 2015. Le Français de 19 ans, qui occupait le baquet habituellement attribué au Britannique Jolyon Palmer, 13e à Sotchi, n’a accumulé que six tours sans signer le moindre chrono. Originaire d’Espagne, Esteban Ocon retrouvait à cette occasion son ancien rival en F3 Max Verstappen.
+Max Verstappen promu
+
+   
+
+
+Autre grande première sur le circuit de Catalogne pour le Néerlandais Max Verstappen, passé d’un baquet Toro Rosso à celui d’une Red Bull (à moteur Renault siglé TAG Heuer), une promotion annoncée le 5 mai. Le jeune homme est un habitué des « premières fois », lui qui pilota une F1 alors qu’il n’avait même pas le droit de conduire une 2 CV – à 17 ans, il n’avait pas son permis. Une précocité qui ne sera jamais égalée, la Fédération internationale de l’automobile (FIA) ayant aussitôt modifié son règlement afin que cela ne se reproduise plus. Prometteur depuis ses débuts, Max Verstappen a déjà inscrit 62 points en vingt-trois Grands Prix. Sa deuxième saison débutée chez Toro Rosso se poursuit donc chez Red Bull.
+
+Daniil Kvyat déchu
+Mouvement inverse pour le Russe Daniil Kvyat, qui quitte la « top team » Red Bull pour Toro Rosso. Classé 7e en 2015, et 8e avec 21 points cette saison, après quatre courses, il devance pourtant au classement Max Verstappen (10e à 13 points). Mais Daniil Kvyat paye incontestablement son agressivité incontrôlée des deux dernières courses, avec, à chaque fois pour victime le pilote Ferrari Sebastian Vettel, quadruple champion du monde avec Red Bull. Au départ du Grand Prix de Shanghaï, le 17 avril, le passage en force du Russe a contraint Vettel à donner un coup de volant qui l’a plaqué contre l’autre Ferrari de Kimi Räikkönen ; au départ, encore, à Sotchi (le 1er mai), Daniil Kvyat a percuté deux fois l’arrière de Vettel, qui, après un premier contrôle, a terminé sa course contre un muret.
+McLaren à confirmer
+
+   
+
+
+Après avoir marqué ses premiers points à Sotchi, grâce à la 6e place de Fernando Alonso et la 10e de Jenson Button, l’écurie McLaren-Honda a à cœur de montrer qu’il ne s’agissait ni d’un hasard ni d’un concours de circonstance. Le motoriste y voit un encouragement, quand le directeur de course Eric Boullier y lit une inversion de tendance à confirmer, même s’il reconnaît que son écurie a bénéficié des infortunes des autres équipes. A Barcelone, « les supporteurs fidèles seront derrière Fernando et l’équipe, et nous espérons, pour eux, présenter un bon spectacle et apporter une dynamique positive à la saison européenne », a déclaré Eric Boullier le 10 mai. Un optimisme qui contraste avec la réserve du pilote tant attendu : « Terminer dans le Top 10 ce week-end en Espagne sera difficile. »
+Le Top 10, synonyme de points marqués, est également dans le viseur de Renault, qui effectue cette saison son grand retour comme écurie à part entière, et compte sur Kevin Magnussen pour concrétiser.
+Tout nouveau tout Haas
+
+   
+
+
+Comme le souligne la première écurie américaine inscrite au Championnat du monde de formule 1 depuis trente ans dans son communiqué du 7 mai, pour Haas, tout est nouveau cette année. « Première voiture. Premier tour. Premier pit-stop. La liste est longue », rappelle le team manager Guenther Steiner, même si, personnellement, l’ancien directeur technique de Jaguar Racing et de Red Bull Racing n’en est pas à son premier Grand Prix. Haas aborde l’Espagne avec un joli palmarès puisque leur pilote, le seul Français en F1, Romain Grosjean, compte déjà 22 points au compteur.
+
+   
+
+
+Une première pour Lewis ?
+Toto Wolff vient de vendre ses dernières actions de l’écurie Williams (5 %) à l’homme d’affaires américain Brad Hollinger. Dernier acte d’une prise de participation qui risquait d’être vécue comme un conflit d’intérêts pour l’actuel directeur exécutif de Mercedes-AMG. Mais c’est sur un autre terrain qu’il a été attaqué début mai après la 4e victoire consécutive de Nico Rosberg en quatre courses.
+Au lendemain du Grand Prix de Russie, des rumeurs sont apparues sur les réseaux sociaux accusant l’écurie allemande de favoriser Nico Rosberg en lui donnant une meilleure voiture, au détriment du champion en titre Lewis Hamilton. Certains sont allés jusqu’à parler de sabottage… « Je ne veux pas ignorer ces illuminés qui pensent que nous pénaliserions un de nos pilotes, qui a gagné deux championnats pour nous, a répondu Toto Wolff. Il ne nous a pas laissé tombés, et nous ne le laisserions pas tomber. C’est un sport mécanique et ça peut arriver. » La meilleure façon de couper court aux rumeurs serait une première victoire du pilote britannique, dimanche 15 mai sur le circuit de Catalogne.
+
+
+
+.moninfog {
+    position: relative;
+    height: 500px;
+}
+
+.iprincipale {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.monsvg {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+}
+
+.monsvg g {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.monsvg g:hover {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+
+.tooltipdecodeurs p:before {
+    color: #a2a9ae;
+    content: '› ';
+    font-family: arial;
+    display: inline-block;
+    font-size: inherit;
+    left: 0;
+    position: relative;
+    width: 9px;
+    font-weight: normal;
+}
+
+.ui-widget-content {
+    border: 2px solid #ccd0d3!important;
+    background: #ffffff!important;
+    color: #222222;
+}
+
+.ui-tooltip {
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+    max-width: 350px;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
+
+.listeLiens {
+    background-color: rgba(100, 120, 130, 1);
+    position: absolute;
+    top: 350px;
+    left: 0px;
+    width: 534px;
+    height: 125px;
+    padding: 25px;
+    margin: 0;
+    color: snow;
+}
+
+a,
+a:active {
+    color: snow;
+}
+
+a:hover {
+    color: rgba(255, 220, 80, 1);
+}
+
+
+    
+    
+        
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+            
+                
+            
+        
+    
+    
+        
+        
+        
+    
+
+
+require(['jquery', 'jquery-ui/core', 'jquery-ui/tooltip'], function($) {
+
+
+    var infos = [{
+        "ID": "Australie",
+        "GP": "Grand Prix d'Australie",
+        "dateGP": "20 mars",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/albert-park.html"
+    }, {
+        "ID": "Bahrein",
+        "GP": "Grand Prix de Bahreïn",
+        "dateGP": "3 avril",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/sakhir.html"
+    }, {
+        "ID": "Chine",
+        "GP": "Grand Prix de Chine",
+        "dateGP": "17 avril",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/shanghai.html"
+    }, {
+        "ID": "Russie",
+        "GP": "Grand Prix de Russie",
+        "dateGP": "1er mai",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/sotchi.html"
+    }, {
+        "ID": "Espagne",
+        "GP": "Grand Prix d'Espagne",
+        "dateGP": "15 mai",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/catalunya.html"
+    }, {
+        "ID": "Monaco",
+        "GP": "Grand Prix de Monaco",
+        "dateGP": "29 mai",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/monaco.html"
+    }, {
+        "ID": "Canada",
+        "GP": "Grand Prix du Canada",
+        "dateGP": "12 juin",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/gilles-villeneuve.html"
+    }, {
+        "ID": "Europe",
+        "GP": "Grand Prix d'Europe",
+        "dateGP": "19 juin",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/bakou.html"
+    }, {
+        "ID": "Autriche",
+        "GP": "Grand Prix d'Autriche",
+        "dateGP": "3 juillet",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/red-bull-ring.html"
+    }, {
+        "ID": "GrandeBretagne",
+        "GP": "Grand Prix de Grande-Bretagne",
+        "dateGP": "10 juillet",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/silverstone.html"
+    }, {
+        "ID": "Hongrie",
+        "GP": "Grand Prix d'Hongrie",
+        "dateGP": "24 juillet",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/hungaroring.html"
+    }, {
+        "ID": "Allemagne",
+        "GP": "Grand Prix d'Allemagne",
+        "dateGP": "31 juillet",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/hockenheim.html"
+    }, {
+        "ID": "Belgique",
+        "GP": "Grand Prix de Belgique",
+        "dateGP": "28 août",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/spa-francorchamps.html"
+    }, {
+        "ID": "Italie",
+        "GP": "Grand Prix d'Italie",
+        "dateGP": "4 septembre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/monza.html"
+    }, {
+        "ID": "Singapour",
+        "GP": "Grand Prix de Singapour",
+        "dateGP": "18 septembre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/marina-bay.html"
+    }, {
+        "ID": "Malaisie",
+        "GP": "Grand Prix de Malaisie",
+        "dateGP": "2 octobre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/sepang.html"
+    }, {
+        "ID": "Japon",
+        "GP": "Grand Prix du Japon",
+        "dateGP": "9 octobre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/suzuka.html"
+    }, {
+        "ID": "EtatsUnis",
+        "GP": "Grand Prix des Etats-Unis",
+        "dateGP": "23 octobre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/circuit-des-ameriques.html"
+    }, {
+        "ID": "Mexique",
+        "GP": "Grand Prix du Mexique",
+        "dateGP": "30 octobre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/hermanos-rodriguez.html"
+    }, {
+        "ID": "Bresil",
+        "GP": "Grand Prix du Brésil",
+        "dateGP": "13 novembre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/interlagos.html"
+    }, {
+        "ID": "AbouDhabi",
+        "GP": "Grand Prix d'Abou Dhabi",
+        "dateGP": "27 novembre",
+        "fiche": "http://formule1.lemonde.fr/f1/circuits/yas-marina.html"
+    }]
+
+    $(function() {
+
+
+        $(".moninfog").tooltip({
+            track: true,
+            position: {
+                my: 'left-30 top+50',
+                at: 'right+10 center'
+            },
+            items: "g",
+            tooltipClass: "tooltipdecodeurs",
+
+            // position: {
+            //         my: "left-18 bottom-20",
+            //         at: "center top-10",
+            //       },
+            content: function() {
+                var le_id = $(this).attr("id");
+                for (var i = 0; i < infos.length; i++) {
+                    if (infos[i].ID == le_id) {
+                        var leGP = infos[i].GP
+                        var laDate = infos[i].dateGP
+                        return leGP + " - " + laDate
+                    }
+                }
+            }
+        });
+
+        $('g').click(function() {
+            var nomCercle = $(this).attr("id")
+            for (var i = 0; i < infos.length; i++) {
+                if (infos[i].ID == nomCercle) {
+                    var laFiche = infos[i].fiche
+                    var leGP = infos[i].GP
+                    var laDate = infos[i].dateGP
+                }
+            }
+            // console.log(laFiche, leGP)
+            //Vider les containers
+            $("#titre_GP").html("");
+            $("#lien_fiche").html("");
+
+            //Les remplir avec les bonnes infos
+            //Le titre du Grand Prix
+            $("#titre_GP").html(function() {
+                return leGP + " - " + laDate + "<hr>"
+            });
+
+            //Le lien vers la fiche
+            $("#lien_fiche").html(function() {
+               /* return "<a href=\"" + laFiche + "\" target=\"_blank\">Découvrir la fiche complète de l'épreuve</a>"*/
+                return "Découvrir la fiche complète de l'épreuve";
+            });
+			$("#lien_fiche").attr('target','_blank');
+			$("#lien_fiche").attr('class','rub');
+			
+			$("#lien_fiche").attr('href',function(){
+				return laFiche;
+            });
+
+        })
+
+
+
+    });
+});
+
+
+                        

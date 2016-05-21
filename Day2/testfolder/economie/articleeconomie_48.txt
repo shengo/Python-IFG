@@ -1,0 +1,629 @@
+
+                                                                                                                
+   
+
+
+Bon courage à qui voudra les déloger. Quatre titres, League of Legends (stratégie), Counter-Strike: Global Offensive (tir), Dota 2 (stratégie) et Hearthstone (cartes) monopolisent le classement des jeux vidéo les plus regardés en direct sur la plate-forme de diffusion Twitch, a révélé Nicolas Cerrato, le fondateur de la société d’analyse d’audience du jeu vidéo Gamoloco, lors d’une conférence, vendredi 13 mai, au Videogame Economics Forum (VEF) d’Angoulême (Charentes).
+
+
+	#container_14633898537{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14633898537{
+		height:500px;
+	}
+	#container_14633898537 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14633898537 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14633898537 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14633898537 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Répartition de l'audience sur Twitch en avril 2016
+	79,8 % du temps de visionnage des dix jeux les plus populaires se concentrent sur les quatre géants de la plateforme.
+	
+	Source : Gamoloco
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14633898537",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "pie",
+		spacingBottom: 10
+	},
+	colors:["#0386c3","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["League of Legends","Counter-Strike : Global Offensive","Dota 2","Hearthstone","Dark Souls III","Call of Duty : Black Ops III","World of Warcraft","Minecraft","Tom Clancy's The Division","World of Tanks"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Heures de visionnage (millions)",
+    "showInLegend": true,
+    "innerSize": "40%",
+    "data": [
+      {
+        "name": "League of Legends",
+        "y": 88,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Counter-Strike : Global Offensive",
+        "y": 73,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Dota 2",
+        "y": 43,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Hearthstone",
+        "y": 41,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Dark Souls III",
+        "y": 18,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Call of Duty : Black Ops III",
+        "y": 15,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "World of Warcraft",
+        "y": 8,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Minecraft",
+        "y": 8,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Tom Clancy's The Division",
+        "y": 7,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "World of Tanks",
+        "y": 6,
+        "sliced": false,
+        "selected": false
+      }
+    ]
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: "",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+« Depuis septembre 2014, ça a toujours été les quatre même, explique au Monde Nicolas Cerrato, fondateur de la plateforme française Gamoloco. La plus grande variation, c’est une inversion de place entre Dota et Hearthstone », à la fin de 2015, lors d’un mois de tournoi important sur Hearthstone.
+Dans une industrie traditionnellement portée par la nouveauté, ces titres, sortis entre 2009 et 2014, gagnent même progressivement en importance. En avril 2016, ils représentaient 79,8 % du temps de visionnage consacrés aux dix jeux les plus populaires, et à seuls 65 % de la consommation horaire de Twitch dans son ensemble.
+
+
+	#container_14633912415{
+		padding:5px 5px 0px 10px;
+		width:100%;
+		background-color:#f8f9fb;
+		border:1px solid #d2d6db!important;
+	}
+	#graphe_14633912415{
+		height:500px;
+	}
+	#container_14633912415 .titre{
+		position:relative;
+		z-index:5;
+	}
+	#container_14633912415 .titre:before{
+		font-size:13px;
+		content:"► ";
+		vertical-align: middle;
+	}
+	#container_14633912415 .subtitre{
+		display:block;
+	}
+	.highcharts-tooltip span {
+		height: auto;
+		min-width: 170px;
+		z-index: 9998!important;
+		overflow: auto;
+		opacity: 1;
+		white-space: normal !important;
+	}
+	.tooltiplarge {
+		width: 230px;
+	}
+	#container_14633912415 .credits{
+		text-align: right;
+		margin-right: 5px;
+		padding-bottom: 5px;
+	}
+
+
+
+	Répartition de la consommation horaire de jeux sur Twitch
+	Les quatre titres les plus populaires sur Twitch concentrent plus des deux-tiers de l'activité de la plateforme.
+	
+	
+
+
+
+require(['highcharts/4.1.9','highcharts-standalone'], function() {
+
+	//FONCTIONS GLOBALES
+	Highcharts.setOptions({
+		lang: {
+			decimalPoint: ',',
+			thousandsSep: '&nbsp;',
+			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
+			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+			noData: 'Pas de données à afficher', 
+			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
+		}
+	});
+	var annotation_spe = []
+
+//GRAPHE  
+	var chart = new Highcharts.Chart({
+	chart:{
+		renderTo:"graphe_14633912415",
+		backgroundColor: "rgba(255,255,255,0)",
+		borderRadius: 0,
+		alignTicks:false,
+		type: "pie",
+		spacingBottom: 10
+	},
+	colors:["#ff3232","#FFc832","#ff3232","#F19300","#28beaa","#285a82","#821400","#191919"],
+	credits:{
+		enabled:false},
+	title: {
+		text: ""
+	},
+	subtitle: {
+		text: ""
+	},
+	plotOptions: {
+		series: {
+			dataLabels: {
+				inside: false,
+				allowOverlap: true,
+				format: "{y} ",
+				style: {
+					textShadow: 'none',
+					color: '#333'
+				}
+			},
+			connectNulls:true,
+			stacking:null,
+			marker:{
+				symbol:"circle",
+				fillColor:"#FFF",
+				lineWidth: 2,
+				radius:3,
+				lineColor:null
+			},
+			states:{
+				hover:{
+					lineWidthPlus : 0
+				}
+			}
+		},
+		pie:{
+			dataLabels:{
+				distance:30, 
+				softConnector:false
+			}
+		}
+	},
+	yAxis:[{
+		id:"0",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "" ,
+			label: {
+				useHTML: false,
+				text:"",
+				align: "left",
+				x: -3
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: -5
+			}
+		}]
+	},{
+		id:"1",
+		allowDecimals:false,
+		type:"linear",
+		title: {
+			text:""
+		},
+		labels: {
+			useHTML: false,
+			format: "{value} ",
+			zIndex: -1
+		},
+		min: null,
+		max: null,
+		startOnTick: true,
+		endOnTick:true,
+		reversed:false,
+		opposite:true
+	}],
+	xAxis: {
+		type: "linear",
+		 categories:["Top 4 (League of Legends, Counter-Strike : Global Offensive, Dota 2. Hearthstone)","Autres jeux"],
+		title: {
+			text: ""
+		},
+		labels: {
+			useHTML: false,
+			step: "",
+			format: "{value}"
+		},
+		plotLines: [{
+			color: "#ccc",
+			width: "",
+			value: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				verticalAlign: "top",
+				x: 5,
+				y: ""
+			}
+		}],
+		plotBands: [{
+			color: "#ccc",
+			from: "",
+			to: "",
+			label: {
+				useHTML: false,
+				text: "",
+				textAlign: "",
+				align: "left",
+				verticalAlign: "top",
+				x: "",
+				y: 10
+			}
+		}]
+	},
+	legend:{
+		enabled:1,
+		layout:"horizontal", 
+		verticalAlign:"bottom", 
+		align:"center",
+		y:-10
+	},
+//SERIES
+	series:[
+  {
+    "name": "Heures de visionnage (millions)",
+    "showInLegend": true,
+    "innerSize": "40%",
+    "data": [
+      {
+        "name": "Top 4 (League of Legends, Counter-Strike : Global Offensive, Dota 2. Hearthstone)",
+        "y": 245,
+        "sliced": false,
+        "selected": false
+      },
+      {
+        "name": "Autres jeux",
+        "y": 127,
+        "sliced": false,
+        "selected": false
+      }
+    ]
+  }
+],
+	tooltip: {
+		useHTML: true,
+		shared: false,
+		valueDecimals: 2,
+		valuePrefix: "",
+		valueSuffix: "",
+		backgroundColor: {
+			linearGradient: [0, 0, 0, 60],
+			stops: [[0, '#FFFFFF'],[1, '#E0E0E0']]
+		},
+		dateTimeLabelFormats: {
+			hour: "",
+		},
+		pointFormat:'<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>',
+		hideDelay: 200,
+		borderWidth: 1,
+		borderColor: "#AAA",
+		formatter: function(tooltip) {
+			return tooltip.defaultFormatter.call(this, tooltip)
+		},
+	}
+})
+
+	function findLength(str) {
+		if (str.length > 100) {
+			el = document.getElementsByClassName('highcharts-tooltip')[1].firstChild
+			if (el.classList) {el.classList.add('tooltiplarge');}
+			else {el.className += ' ' + 'tooltiplarge';}
+		}	
+	}
+
+});
+
+
+Comme le souligne Gamoloco, de nombreux acteurs majeurs du jeu vidéo sont totalement absents du top 10, comme Nintendo, Sony ou Electronic Arts. De nombreuses superproductions, comme Fallout 4, y ont fait une courte apparition.
+La société française estime que le sport électronique, le suspense et la capacité à véhiculer des émotions sont les principaux vecteurs d’audience, davantage que les graphismes ou la qualité technique.
+« Dans l’industrie, on parle de plus en plus de game as a service [le jeu en tant que service], il faudrait plutôt parler de game as a hobby [le jeu en tant que hobbie], pointe Nicolas Cerrato. De nombreux amateurs se connectent chaque jour pour suivre le jeu qu’ils aiment. C’est quelque chose qui est désormais accepté. »
+Parmi les défieurs, trois jeux ont vu leur audience augmenter : la série « Call of Duty », qu’Activision cherche à repositionner dans le domaine du sport électronique ; le jeu de tank World of Tanks, à la faveur du dénouement haletant de son tournoi mondial annuel, et le récent jeu de stratégie mobile de Supercell, Clash Royale, premier jeu sur smartphone à viser la diffusion en direct.
+
+        Lire aussi :
+         
+    
+                Dénouement rocambolesque de la finale mondiale du jeu vidéo « World of Tanks »
+    
+
+
+                        
